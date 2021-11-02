@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+KR&display=swap");
+
+@import "reset.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Cookie", cursive;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.container {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 auto 50px;
+}
+
+.title .paullab-img {
+  display: inline-block;
+  width: 97.5px;
+  height: 145px;
+  background: url("http://www.paullab.co.kr/images/frame_paullab.png") no-repeat
+    0 0 / 4096px 145px;
+  animation: paullab 3.3s infinite steps(42);
+  -webkit-animation: paullab 3.3s infinite steps(42);
+}
+
+@keyframes paullab {
+  100% {
+    background-position: -4096px 0;
+  }
+}
+
+@-webkit-keyframes paullab {
+  100% {
+    background-position: -4096px 0;
+  }
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitle + p {
+  margin: 40px auto;
+  line-height: 1.5;
+}
+
+.about-us__title {
+  margin: 80px auto 40px;
+  font-size: 45px;
+}
+
+.about-us__title::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  background-color: #2b68a4;
+}
+
+.about-us__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-us__list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.f_top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #4f4f4f;
+}
+
+.f_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.f_menu li {
+  flex: 1 1 50%;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.sns li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.f_bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #4f4f4f;
+  font-size: 14px;
+}
+
+.info {
+  display: flex;
+}
+
+.info li:first-child ~ li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  margin: 0 10px;
+  background-color: #4f4f4f;
+  vertical-align: bottom;
+}
+
+.info .bold,
+.corp {
+  font-weight: bold;
+}
