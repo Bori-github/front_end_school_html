@@ -1,0 +1,13 @@
+h2 {
+  color: blue;
+}
+/* important 남발하지 않기 */
+
+/* 
+      아래와 같이 여러가지로 사용할 수 있습니다. 
+      @import url("reset.css");
+      @import url(reset.css);
+      @import url("./reset.css");
+      @import "reset.css"; // @import reset.css;는 안됩니다.
+    */
+@import "reset.css";
