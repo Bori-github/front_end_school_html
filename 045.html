@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radius</title>
+    <style>
+      .test {
+        width: 200px;
+        height: 200px;
+        background: darkblue;
+      }
+
+      .one {
+        display: inline-block;
+        margin-right: 50px;
+        border: 10px solid black;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 30px;
+      }
+
+      .two {
+        display: inline-block;
+        border: 10px solid black;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 30px;
+      }
+
+      .face,
+      .ear-left,
+      .ear-right {
+        border: 10px solid #000;
+        background-color: burlywood;
+      }
+      .face {
+        width: 300px;
+        height: 200px;
+
+        border-radius: 50%;
+      }
+
+      .ear-left,
+      .ear-right {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+      .ear-left {
+      }
+
+      .ear-right {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="one test"></div>
+    <div class="two test"></div> -->
+
+    <div class="licat">
+      <div class="ear-left"></div>
+      <div class="ear-right"></div>
+      <div class="face"></div>
+    </div>
+  </body>
+</html>
