@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+
+      /* second가 position absolute로 인해 normal flow에서 벗어남 */
+      /* normal flow는 absolute를 인지할 수 없다. */
+      .second {
+        /* position: relative; */
+        position: absolute;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div>안녕하세요</div>
+    <div class="second">안녕하세요</div>
+    <div>안녕하세요</div>
+  </body>
+</html>

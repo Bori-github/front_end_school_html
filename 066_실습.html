@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float - 실습</title>
+    <style>
+      header,
+      main,
+      footer {
+        width: 900px;
+      }
+
+      header,
+      footer {
+        height: 150px;
+        background-color: royalblue;
+      }
+
+      main::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      section {
+        float: left;
+        width: 300px;
+        height: 300px;
+        background-color: salmon;
+      }
+
+      section:nth-child(2) {
+        background-color: sandybrown;
+      }
+
+      section:nth-child(3) {
+        background-color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
