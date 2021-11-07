@@ -35,9 +35,6 @@
   right: 90px;
 }
 
-.eye-right {
-}
-
 .face-right {
   position: absolute;
   top: 120px;
@@ -190,6 +187,7 @@
   border-left: var(--border);
   border-top-left-radius: 170px;
 }
+
 .beanie-right {
   right: 0;
   border-top: var(--border);
