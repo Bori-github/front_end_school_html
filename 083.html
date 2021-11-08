@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: lightcoral;
+        color: #fff;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: bold;
+      }
+
+      .container {
+        width: 400px;
+        padding: 20px 0;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .say-hello-box {
+        overflow: hidden;
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .say-hello-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: inset 0 0 10px 10px lightcoral;
+      }
+
+      .say-hello {
+        width: 2000px;
+        animation: rolling 5s infinite;
+      }
+
+      .say-hello::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .say-hello li {
+        width: 400px;
+        float: left;
+        /* background-color: royalblue; */
+      }
+
+      @keyframes rolling {
+        0% {
+          transform: translateX(0px);
+        }
+        25% {
+          transform: translateX(-20%);
+        }
+        50% {
+          transform: translateX(-40%);
+        }
+        75% {
+          transform: translateX(-60%);
+        }
+        100% {
+          transform: translateX(-80%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>안녕하세요.</p>
+      <div class="say-hello-box">
+        <ul class="say-hello">
+          <li>군모닝 입니다.</li>
+          <li>굳애프터눈 입니다.</li>
+          <li>굳이브닝 입니다.</li>
+          <li>군나잍 입니다.</li>
+          <li>군모닝 입니다.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
