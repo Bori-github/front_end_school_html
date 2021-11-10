@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  background-color: #5b2386;
+  color: #fff;
+  font-family: "GmarketSansMedium", sans-serif;
+  text-align: center;
+}
+
+/* util */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+}
+
+/* header */
+.header-title {
+  position: relative;
+  width: 564px;
+  height: 225px;
+  margin: 125px 0 50px;
+}
+
+.header-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-title .img-title {
+  width: 100%;
+}
+
+.header-title .img-clock {
+  z-index: -10;
+  height: 100%;
+}
+
+/* section.txt-container */
+.txt-container {
+  font-size: 17px;
+  background: url("../img/quotes.png") no-repeat center center;
+}
+
+.txt-small-qoutes {
+  color: #f5df4d;
+  font-family: "OTEnjoystoriesBA", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.txt-big-qoutes {
+  margin: 50px 0;
+  line-height: 1.8;
+}
+
+.txt-big-qoutes strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* section.form-container */
+.form-container {
+  font-size: 24px;
+  line-height: 3;
+}
+
+.form-container input {
+  width: 228px;
+  height: 57px;
+  border: 0;
+  border-radius: 7px;
+  color: #babcbe;
+  font-family: "GmarketSansMedium", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form-container input::placeholder {
+  color: #babcbe;
+}
+
+.form-container .btn {
+  position: relative;
+  margin-top: 115px;
+  padding: 21px 49px;
+  border: 0;
+  border-radius: 56px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #fcee21;
+  color: #5b2386;
+  font-family: "GmarketSansBold", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-container .btn::after {
+  content: "";
+  position: absolute;
+  right: -71px;
+  width: 64px;
+  height: 72px;
+  background: url("../img/click.png") no-repeat;
+  background-size: 100%;
+}
+
+/* footer.cont-company */
+.cont-company {
+  margin: 70px 0;
+}
+
+.cont-company .img-logo {
+  width: 125px;
+  margin-bottom: 20px;
+}
+
+.cont-company .txt-copy {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+@media screen and (max-width: 450px) {
+  /* header */
+  .header-title {
+    width: 267px;
+    height: 125px;
+    margin: 50px 0 40px;
+  }
+
+  /* section.txt-container */
+  .txt-container {
+    width: 302px;
+    font-size: 14px;
+    background-size: 302px;
+  }
+
+  .txt-small-qoutes {
+    font-size: 22px;
+  }
+
+  .txt-big-qoutes {
+    line-height: 2;
+  }
+
+  .txt-big-qoutes strong {
+    font-size: 14px;
+  }
+
+  /* section.form-container */
+  .form-container {
+    padding: 0 35px;
+    font-size: 14px;
+  }
+
+  .form-container input {
+    width: 156px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form-container .btn {
+    width: 241px;
+    margin-top: 50px;
+    padding: 19px 36px;
+    border-radius: 13px;
+    font-size: 14px;
+  }
+
+  .form-container .btn::after {
+    right: -54px;
+    width: 42px;
+    height: 48px;
+  }
+
+  /* footer.cont-company */
+  .cont-company {
+    margin: 30px 0;
+  }
+
+  .cont-company .img-logo {
+    width: 91px;
+    margin-bottom: 17px;
+  }
+
+  .cont-company .txt-copy {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 9px;
+    line-height: 13px;
+  }
+}
