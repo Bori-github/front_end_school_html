@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>perspective</title>
+    <style>
+      @keyframes turning {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      }
+
+      .origin {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        border: 1px solid #333;
+        perspective: 400px;
+        transform-style: preserve-3d;
+      }
+
+      .card {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        font-size: 32px;
+        font-weight: bold;
+        animation: turning 2s;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        /* transform-origin: left; */
+        /* transform-origin: top; -> x축 이동 */
+        /* transform-origin: top right; */
+      }
+
+      .card-front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: tomato;
+        backface-visibility: hidden;
+      }
+
+      .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: cornflowerblue;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <div class="card">
+        <div class="card-front">앞</div>
+        <div class="card-back">뒤</div>
+      </div>
+    </div>
+  </body>
+</html>
