@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Open</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      @font-face {
+        font-family: "S-CoreDream-9Black";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "ChosunKm";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .cont-card {
+        width: 300px;
+        height: 390px;
+        border: 1px solid #333;
+        perspective: 600px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transition: all 1s;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card-back,
+      .card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        backface-visibility: hidden;
+      }
+
+      .card-back {
+        background-color: #333;
+        color: #fff;
+        font-family: "S-CoreDream-9Black";
+        font-size: 30px;
+      }
+
+      .card-front {
+        background-color: #ffb8cc;
+        color: #000;
+        font-family: "ChosunKm";
+        font-size: 40px;
+        font-weight: bold;
+        transform: rotateY(180deg);
+      }
+      .card-back p,
+      .card-front p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .card-back p:nth-child(2),
+      .card-front p {
+        width: 250px;
+        height: 340px;
+        border: 3px solid #000;
+        line-height: 340px;
+      }
+
+      .card-back p:nth-child(1) {
+        color: #000;
+        font-size: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont-card">
+      <div class="card">
+        <div class="card-back">
+          <p>W</p>
+          <p>스트릿우먼파이터</p>
+        </div>
+        <div class="card-front">
+          <p>LACHICA</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
