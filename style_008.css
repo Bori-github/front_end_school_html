@@ -53,6 +53,7 @@ h2 {
 .subtitle {
   font-size: 25px;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 .subtitle + p {
@@ -137,7 +138,7 @@ footer {
   display: flex;
 }
 
-.info li:first-child ~ li::before {
+.info li + li::before {
   content: "";
   display: inline-block;
   width: 1px;
