@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 - Weniv</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="cont-modal">
+      <section class="cont-modal-login">
+        <header class="header-modal">
+          <h2 class="tit-modal">로그인 또는 회원가입</h2>
+          <a href="index.html" class="btn-close">
+            <i class="xi-close-thin"></i>
+          </a>
+        </header>
+
+        <article class="cont-weniv-login">
+          <h3 class="sr-only">위니브 아이디, 로그인 입력</h3>
+          <p class="txt-weniv-login">
+            위니브에서 여러분의 궁금증을 해결하세요!:)
+          </p>
+          <form action="#" class="form-weniv-login">
+            <label for="user-id" class="sr-only">아이디</label>
+            <input
+              required
+              type="text"
+              placeholder="아이디"
+              class="inp-id"
+              id="user-id"
+            />
+            <small class="msg-inp-requied">아이디를 입력해주세요</small>
+            <label for="user-pw" class="sr-only">비밀번호</label>
+            <input
+              required
+              type="password"
+              placeholder="비밀번호"
+              class="inp-pw"
+              id="user-pw"
+            />
+            <small class="msg-inp-requied">비밀번호를 입력해주세요</small>
+            <div class="box-checkbox">
+              <input type="checkbox" id="check-login" />
+              <label for="check-login">로그인 상태 유지</label>
+            </div>
+            <button type="submit" class="btn-login">로그인</button>
+          </form>
+          <div class="box-links">
+            <a href="#" class="link-signup">회원가입</a>
+            <a href="#" class="link-find">아이디/비밀번호 찾기</a>
+          </div>
+        </article>
+
+        <p class="txt-or">또는</p>
+
+        <article class="cont-social-login">
+          <h3 class="sr-only">소셜 로그인</h3>
+          <button type="button" class="btn-social-login">
+            구글 계정으로 로그인
+          </button>
+          <button type="button" class="btn-social-login">
+            페이스북 계정으로 로그인
+          </button>
+          <button type="button" class="btn-social-login">
+            네이버 계정으로 로그인
+          </button>
+          <button type="button" class="btn-social-login">
+            카카오톡 계정으로 로그인
+          </button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
