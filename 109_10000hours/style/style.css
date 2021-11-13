@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+#app {
+  padding-bottom: 70px;
+  background-color: #5b2386;
+  color: #fff;
+  font-family: "GmarketSansMedium";
+  text-align: center;
+}
+
+.tit-law {
+  display: inline-block;
+  position: relative;
+  margin-top: 194px;
+}
+
+.tit-law .img-tit {
+  position: relative;
+  z-index: 10;
+}
+
+.tit-law::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 225px;
+  height: 225px;
+  margin: -112px 0 0 -112px;
+  background-image: url("../img/title_bg.png");
+  /* background-size: 225px; */
+  background-position: center;
+}
+
+.img-txt {
+  max-width: 486px;
+  margin: 125px auto 87px;
+}
+
+.txt-desc {
+  position: relative;
+  max-width: 475px;
+  margin: 0 auto 96px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.txt-desc .tit-desc {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.txt-desc::before,
+.txt-desc::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 37px;
+  height: 32px;
+  margin-top: -35px;
+}
+
+.txt-desc::before {
+  left: 0;
+  background-image: url("../img/txt-left.png");
+}
+
+.txt-desc::after {
+  right: 0;
+  background-image: url("../img/txt-right.png");
+}
+
+.cont-inp,
+.cont-result {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.cont-inp .txt-wannabe {
+  margin-bottom: 27px;
+}
+
+.cont-inp .txt-time {
+  margin-bottom: 115px;
+}
+
+.cont-inp .txt-wannabe input,
+.cont-inp .txt-time input {
+  width: 228px;
+  height: 53px;
+  border: 0;
+  border-radius: 7px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.cont-inp .txt-wannabe input::placeholder,
+.cont-inp .txt-time input::placeholder {
+  color: #babcbe;
+  font-family: "GmarketSansMedium";
+}
+
+.cont-inp .btn-exc,
+.cont-result .btn-go,
+.cont-result .btn-share {
+  margin-bottom: 150px;
+  padding: 15px 50px;
+  font-family: "GmarketSansBold";
+  font-size: 23px;
+  /* line-height: 24px; */
+  border: 0;
+  border-radius: 56px;
+  background-color: #fcee21;
+  color: #5b2386;
+  cursor: pointer;
+}
+
+.cont-inp .btn-exc {
+  position: relative;
+}
+
+.cont-inp .btn-exc::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: -74px;
+  bottom: -22px;
+  width: 64px;
+  height: 72px;
+  background-image: url("../img/hand.png");
+}
+
+.cont-result .txt-wannabe,
+.cont-result .txt-time {
+  line-height: 72px;
+}
+
+.cont-result .txt-wannabe {
+  margin-bottom: 17px;
+}
+
+.cont-result .txt-time {
+  margin-bottom: 127px;
+}
+
+.cont-result .txt-wannabe strong,
+.cont-result .txt-time strong {
+  font-family: "GmarketSansBold";
+  font-size: 72px;
+  vertical-align: top;
+}
+
+.cont-result .btn-share {
+  margin-left: 15px;
+  background-color: #fff;
+}
+
+.cont-footer {
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.cont-footer .img-footer {
+  width: 125px;
+  height: 25px;
+  margin: 0 auto 20px;
+}
+
+@media screen and (max-width: 360px) {
+  #app {
+    padding: 0 24px 32px;
+  }
+
+  .tit-law {
+    margin-top: 76px;
+    width: 267px;
+    height: 57px;
+  }
+
+  .tit-law::after {
+    width: 106px;
+    height: 106px;
+    margin: -53px 0 0 -53px;
+    background-size: 106px;
+  }
+
+  .img-txt {
+    max-width: 297px;
+    margin: 69px auto 60px;
+  }
+
+  .txt-desc {
+    margin: 0 auto 62px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .txt-desc .tit-desc {
+    font-size: 16px;
+  }
+
+  .txt-desc::before,
+  .txt-desc::after {
+    width: 18px;
+    height: 15px;
+    margin-top: -35px;
+    background-size: 18px 15px;
+  }
+
+  .cont-inp,
+  .cont-result {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .cont-inp .txt-wannabe {
+    margin-bottom: 27px;
+  }
+
+  .cont-inp .txt-time {
+    margin-bottom: 115px;
+  }
+
+  .cont-inp .txt-wannabe input,
+  .cont-inp .txt-time input {
+    width: 156[x];
+    height: 37px;
+
+    border-radius: 7px;
+    font-size: 24px;
+  }
+
+  .cont-inp .txt-wannabe input::placeholder,
+  .cont-inp .txt-time input::placeholder {
+    color: #babcbe;
+    font-family: "GmarketSansMedium";
+  }
+
+  .cont-inp .btn-exc,
+  .cont-result .btn-go,
+  .cont-result .btn-share {
+    margin-bottom: 150px;
+    padding: 20px 35px;
+    font-size: 17px;
+    line-height: 17px;
+    border-radius: 13px;
+  }
+
+  .cont-inp .btn-exc::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -74px;
+    bottom: -22px;
+    width: 64px;
+    height: 72px;
+    background-image: url("../img/hand.png");
+  }
+}
