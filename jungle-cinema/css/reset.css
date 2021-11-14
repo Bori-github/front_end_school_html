@@ -134,6 +134,10 @@ a {
 button {
   cursor: pointer;
 }
+img {
+  display: block;
+  width: 100%;
+}
 .sr-only {
   overflow: hidden;
   position: absolute;
@@ -143,4 +147,9 @@ button {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+.sl-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

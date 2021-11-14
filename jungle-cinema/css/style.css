@@ -1,9 +1,69 @@
 @charset "utf-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 
 @import "reset.css";
 
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
+
+/* main.cont-jungle-cinema */
+.cont-jungle-cinema {
+  width: 1060px;
+  height: 1170px;
+  margin: 86px auto 135px;
+  padding: 0 28px 31px 29px;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+
+/* header.cont-header */
+.cont-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-header .tit-header {
+  margin-top: 41px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+}
+
+.cont-header .tit-header::after {
+  display: block;
+  content: "";
+  width: 650px;
+  height: 2px;
+  margin: 37px auto 0;
+  background-color: #bdbdbd;
+}
+
+.cont-header .list-movie-nav {
+  display: flex;
+  margin: 28px 0;
+}
+
+.cont-header .list-movie-nav li {
+  color: #828282;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.cont-header .list-movie-nav li.active {
+  color: #000;
+  font-weight: 900;
+}
+
+.cont-header .list-movie-nav li + li {
+  margin-left: 60px;
+}
+
+/* section.cont-movie */
