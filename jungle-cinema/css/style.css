@@ -11,7 +11,6 @@ body {
 /* main.cont-jungle-cinema */
 .cont-jungle-cinema {
   width: 1060px;
-  height: 1170px;
   margin: 86px auto 135px;
   padding: 0 28px 31px 29px;
   box-sizing: border-box;
@@ -52,7 +51,6 @@ body {
 
 .cont-header .list-movie-nav li {
   color: #828282;
-  font-size: 16px;
   font-weight: 500;
   line-height: 19px;
 }
@@ -67,3 +65,215 @@ body {
 }
 
 /* section.cont-movie */
+.cont-movie .list-movie {
+  overflow: auto;
+  height: 922px;
+  padding: 26px 27px 31px 28px;
+  box-sizing: border-box;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.cont-movie .list-movie::-webkit-scrollbar {
+  display: none;
+}
+
+.cont-movie .list-movie li {
+  overflow: hidden;
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  /* filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); */
+}
+
+.cont-movie .list-movie li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.cont-movie .list-movie li:nth-child(4) ~ li {
+  margin-top: 20px;
+}
+
+.cont-movie .list-movie article {
+  width: 180px;
+  padding: 19px 20px 0;
+}
+
+.list-movie .link-movie {
+  overflow: hidden;
+  display: block;
+  height: 250px;
+  margin-bottom: 11px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.list-movie .tit-movie {
+  font-weight: 900;
+  list-style: 23px;
+}
+
+.list-movie .list-movie-info {
+  overflow: hidden;
+  margin: 12px 0 18px;
+}
+
+.list-movie .list-movie-info dt,
+.list-movie .list-movie-info dd {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.list-movie .list-movie-info dt {
+  margin-right: 5px;
+  color: #828282;
+}
+
+.list-movie .list-movie-info div {
+  float: left;
+}
+
+.list-movie .list-movie-info .item-grade {
+  float: right;
+}
+
+.list-movie-info .item-grade dd::before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 13px;
+  margin: 3px 4px 0 0;
+  background-image: url("../images/icon_grade.png");
+  vertical-align: top;
+}
+
+.list-movie li > a[class^="link"] {
+  display: inline-block;
+  width: 50%;
+  height: 41px;
+  box-sizing: border-box;
+  border-top: 1px solid #bdbdbd;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 41px;
+  text-align: center;
+}
+
+.list-movie li > .link-reserve::after {
+  content: "";
+  float: right;
+  width: 1px;
+  height: 100%;
+  background-color: #bdbdbd;
+}
+
+.list-movie li > .link-teaser::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: 13px 2px 0 0;
+  background-image: url("../images/icon_play.png");
+  background-size: 16px;
+  vertical-align: top;
+}
+
+/* footer.cont-company */
+.cont-company {
+  min-width: 1189px;
+  padding: 53px 0 38px;
+  background-color: #f2f2f2;
+}
+
+.cont-info-company {
+  overflow: hidden;
+  position: relative;
+  width: 1189px;
+  margin: 0 auto;
+}
+
+.cont-info-company .tit-company {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.cont-info-company .tit-company::after {
+  display: block;
+  content: "";
+  width: 1189px;
+  height: 1px;
+  margin: 42px 0 36px;
+  background-color: #c4c4c4;
+}
+
+.cont-info-company .list-info-company {
+  float: left;
+}
+.cont-info-company .list-info-company dt,
+.cont-info-company .list-info-company dd {
+  display: inline-block;
+  color: #4f4f4f;
+  font-size: 14px;
+}
+
+.cont-info-company .list-info-company dt,
+.cont-info-company .list-info-company dd:nth-of-type(1) {
+  font-weight: 700;
+}
+
+.cont-info-company .list-info-company dd::after {
+  content: "|";
+  margin: 0 4px 0 6px;
+}
+
+.cont-info-company .list-info-company dd:last-child:after {
+  display: none;
+}
+
+.cont-info-company .list-sns {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cont-info-company .list-sns li {
+  float: left;
+  margin-left: 20px;
+}
+
+.cont-info-company .list-sns a {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.cont-info-company .list-sns .link-twitter {
+  background-image: url("../images/icon_sns/twitter.png");
+  background-size: 24px;
+}
+
+.cont-info-company .list-sns .link-instagram {
+  background-image: url("../images/icon_sns/instagram.png");
+  background-size: 24px;
+}
+
+.cont-info-company .list-sns .link-facebook {
+  background-image: url("../images/icon_sns/facebook.png");
+  background-size: 24px;
+}
+
+.cont-info-company .txt-copy {
+  float: right;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
