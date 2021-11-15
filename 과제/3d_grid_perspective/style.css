@@ -19,7 +19,6 @@ body {
   width: 500px;
   height: 500px;
   transform: skew(-45deg) rotateX(45deg);
-  /* perspective: 200px; */
 }
 
 .row {
