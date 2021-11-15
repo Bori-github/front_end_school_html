@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>holy grail layout</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      /* reset */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* utill */
+      .sr-only {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        border: 10px solid #333;
+      }
+
+      .item {
+        /* border: 5px solid salmon; */
+      }
+
+      .item:nth-child(1) {
+        width: 100%;
+        background-color: sandybrown;
+      }
+
+      .item:nth-child(2) {
+        width: 70%;
+        background-color: seagreen;
+      }
+
+      .item:nth-child(3) {
+        width: 30%;
+        background-color: skyblue;
+      }
+
+      .item:nth-child(4) {
+        width: 100%;
+        background-color: slateblue;
+      }
+
+      @media screen and (max-width: 800px) {
+        .item:nth-child(2) {
+          width: 1000%;
+        }
+
+        .item:nth-child(3) {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="item">
+        <h1 class="sr-only">제목</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#" class="link-menu">MENU1</a></li>
+            <li><a href="#" class="link-menu">MENU2</a></li>
+            <li><a href="#" class="link-menu">MENU3</a></li>
+            <li><a href="#" class="link-menu">MENU4</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="item">
+        <h2 class="sr-only">제목2</h2>
+        <article>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+          similique temporibus magni sunt assumenda facere excepturi
+          reprehenderit velit eum, illum sapiente blanditiis. Voluptatum
+          excepturi eos voluptate consequuntur rem dolores vel.
+        </article>
+        <article>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+          similique temporibus magni sunt assumenda facere excepturi
+          reprehenderit velit eum, illum sapiente blanditiis. Voluptatum
+          excepturi eos voluptate consequuntur rem dolores vel.
+        </article>
+      </section>
+      <aside class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste similique
+        temporibus magni sunt assumenda facere excepturi reprehenderit velit
+        eum, illum sapiente blanditiis. Voluptatum excepturi eos voluptate
+        consequuntur rem dolores vel.
+      </aside>
+      <footer class="item">footer</footer>
+    </div>
+  </body>
+</html>

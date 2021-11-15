@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card_2</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+        border: 3px solid #333;
+        border-radius: 10px;
+        background-color: khaki;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 5px;
+        padding: 5px;
+        border: 3px solid #333;
+        border-radius: 10px;
+      }
+      /* 
+      .img-item {
+        flex: 1;
+      } */
+
+      .item-desc {
+        flex: auto;
+        padding: 10px;
+        background-color: lightcoral;
+      }
+
+      @media screen and (max-width: 1330px) {
+        .item {
+          width: 500px;
+        }
+      }
+
+      @media screen and (max-width: 1110px) {
+        .item {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li class="item">
+        <img src="../../img/pumpkin.jpg" alt="" class="img-item" />
+        <p class="item-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non itaque
+          beatae voluptatibus reiciendis assumenda tenetur veritatis nisi
+          officia adipisci consectetur est, aut quasi a possimus cum asperiores
+          atque natus cumque.
+        </p>
+      </li>
+      <li class="item">
+        <img src="../../img/pumpkin.jpg" alt="" class="img-item" />
+        <p class="item-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non itaque
+          beatae voluptatibus reiciendis assumenda tenetur veritatis nisi
+          officia adipisci consectetur est, aut quasi a possimus cum asperiores
+          atque natus cumque.
+        </p>
+      </li>
+      <li class="item">
+        <img src="../../img/pumpkin.jpg" alt="" class="img-item" />
+        <p class="item-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non itaque
+          beatae voluptatibus reiciendis assumenda tenetur veritatis nisi
+          officia adipisci consectetur est, aut quasi a possimus cum asperiores
+          atque natus cumque.
+        </p>
+      </li>
+      <li class="item">
+        <img src="../../img/pumpkin.jpg" alt="" class="img-item" />
+        <p class="item-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non itaque
+          beatae voluptatibus reiciendis assumenda tenetur veritatis nisi
+          officia adipisci consectetur est, aut quasi a possimus cum asperiores
+          atque natus cumque.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
