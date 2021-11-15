@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu-1</title>
+    <link rel="stylesheet" href="../../reset.css" />
+    <style>
+      .container {
+        display: flex;
+        /* align-items: center; */
+        background-color: lightslategray;
+        /* border: solid 3px #555; */
+        border-radius: 10px;
+        height: 75px;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .item {
+        width: 20%;
+        margin: 5px;
+        padding: 5px;
+        border: 2px solid #555;
+        border-radius: 10px;
+        background-color: lightgreen;
+        text-align: center;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      .item:hover {
+        flex: 1.5;
+        background-color: lightsteelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container-color container">
+      <li class="item logo">Logo</li>
+      <li class="item">About me</li>
+      <li class="item">Skills</li>
+      <li class="item">Portfolio</li>
+      <li class="item">Contact me</li>
+    </ul>
+  </body>
+</html>
