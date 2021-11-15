@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Layout - Flex</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+      @import "../reset.css";
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #404040;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      .login-container {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 135px;
+        padding: 16px;
+        border: 1px solid #dae1e6;
+        background-color: #f7f9fa;
+      }
+
+      .login-container p {
+        color: #808080;
+        font-size: 14px;
+      }
+
+      .login-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 15px 0 10px;
+        padding: 15px 0;
+        border: 1px solid #15c654;
+        background-color: #19ce60;
+        color: #fff;
+      }
+
+      .login-btn::before {
+        content: "";
+        width: 60px;
+        height: 12px;
+        margin-right: 8px;
+        background-image: url(images/title.png);
+        background-size: 60px;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .find-id::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 14px;
+        margin-right: 5px;
+        background-image: url(images/lock.png);
+        background-size: 10px;
+      }
+
+      .find-pw::before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #d7dce0;
+        vertical-align: 4px;
+      }
+
+      .sign-up::before {
+        content: "";
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-right: 5px;
+        background-image: url(images/user.png);
+        background-size: 11px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="login-container">
+      <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+      <!-- button 보다 a로 작성하는 것이 더 적절했을 것! -->
+      <!-- <button type="button" class="login-btn">로그인</button> -->
+      <a href="#" class="login-btn">로그인</a>
+      <footer>
+        <div>
+          <a href="#" class="find-id">아이디</a>
+          <a href="#" class="find-pw">비밀번호찾기</a>
+        </div>
+        <a href="#" class="sign-up">회원가입</a>
+      </footer>
+    </article>
+  </body>
+</html>
