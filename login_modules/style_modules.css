@@ -1,0 +1,94 @@
+.btn-login {
+  width: 100%;
+  padding: 17px 0 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.btn-close {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.module-inp .inp-login {
+  display: block;
+  width: 100%;
+  padding: 15px 0 15px 16px;
+  box-sizing: border-box;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.module-inp.module-inp-id.error .inp-login {
+  border: 2px solid #f4492e;
+}
+
+.module-inp .inp-error {
+  display: none;
+  margin: 6px 0 4px;
+  color: #f4492e;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.module-inp.error .inp-error {
+  display: block;
+}
+
+.module-inp + .module-inp {
+  margin-top: 10px;
+}
+
+.link-sns-login {
+  display: block;
+  padding: 15px 0 16px;
+  box-sizing: border-box;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background: url("images/icon_google.png") no-repeat 15px center;
+  background-size: auto 22px;
+}
+/* 
+.link-sns-login::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-left: 16px;
+  background-image: url("images/icon_google.png");
+} */
+
+.link-sns-login.icon-naver {
+  border-color: #00bf18;
+  background-image: url("images/icon_naver.png");
+}
+
+.link-sns-login.icon-naver::before {
+}
+
+.link-sns-login.icon-facebook {
+  border-color: #2d9cb8;
+  background-image: url("images/icon_facebook.png");
+}
+
+.link-sns-login.icon-kakao {
+  border-color: #f2c94c;
+  background-image: url("images/icon_kakao.png");
+}
