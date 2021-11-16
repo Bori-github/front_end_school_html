@@ -7,6 +7,7 @@ body {
 
 header,
 section,
+article,
 aside,
 footer {
   position: relative;
@@ -14,17 +15,13 @@ footer {
 }
 
 .area-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   color: rgba(0, 0, 0, 0.5);
   font-size: 40px;
   font-weight: bold;
+  transform: translate(-50%, -50%);
 }
 
 /* header */
@@ -83,7 +80,6 @@ section {
 }
 
 article {
-  position: relative;
   width: 48%;
   background-color: lightgreen;
 }
@@ -115,6 +111,7 @@ footer {
 
   .btn-toggle {
     display: block;
+    cursor: pointer;
   }
 
   main {
