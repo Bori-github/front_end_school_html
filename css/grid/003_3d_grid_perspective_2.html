@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        width: 460px;
+        transform: translate(-10px, -10px) rotateX(60deg) rotateY(-10deg)
+          rotateZ(45deg);
+        transform-style: preserve-3d;
+      }
+
+      .item {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+
+      .item::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 100%;
+        height: 100%;
+        background-color: lightskyblue;
+      }
+
+      .item:nth-child(3n)::before {
+        background-color: lemonchiffon;
+      }
+
+      .item:nth-child(3n-1)::before {
+        background-color: lightsalmon;
+      }
+
+      .item:hover::before {
+        animation: here 0.3s alternate infinite;
+      }
+
+      @keyframes here {
+        0% {
+          top: -10px;
+          left: -10px;
+        }
+        100% {
+          top: -20px;
+          left: -20px;
+        }
+      }
+
+      .item input[type="checkbox"]:checked + .ball {
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check1" />
+        <div class="ball"></div>
+        <label for="check1"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check2" />
+        <label for="check2"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check3" />
+        <label for="check3"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check4" />
+        <label for="check4"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check5" />
+        <label for="check5"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check6" />
+        <label for="check6"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check7" />
+        <label for="check7"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check8" />
+        <label for="check8"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check9" />
+        <label for="check9"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check10" />
+        <label for="check10"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check11" />
+        <label for="check11"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check12" />
+        <label for="check12"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check13" />
+        <label for="check13"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check14" />
+        <label for="check14"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check15" />
+        <label for="check15"></label>
+      </section>
+      <section class="item">
+        <input type="checkbox" name="chk-here" id="check16" />
+        <label for="check16"></label>
+      </section>
+    </main>
+  </body>
+</html>

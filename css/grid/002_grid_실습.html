@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holy Grail Layout - grid</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: 1fr 3fr 1fr;
+        /* grid-template-columns: 3fr 1fr; */
+        grid-template-areas:
+          "header   header   header "
+          "section  section  aside"
+          "footer   footer   footer";
+      }
+      .header {
+        background-color: lightcyan;
+      }
+      .section {
+        background-color: lightgoldenrodyellow;
+      }
+      .section {
+        background-color: lightgray;
+      }
+      .footer {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">header</header>
+      <main>
+        <section class="section">section</section>
+        <aside class="aside">aside</aside>
+      </main>
+      <footer class="footer">footer</footer>
+    </div>
+  </body>
+</html>
