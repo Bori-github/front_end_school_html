@@ -65,27 +65,16 @@
   background: url("images/icon_google.png") no-repeat 15px center;
   background-size: auto 22px;
 }
-/* 
-.link-sns-login::before {
-  display: block;
-  content: "";
-  width: 22px;
-  height: 22px;
-  margin-left: 16px;
-  background-image: url("images/icon_google.png");
-} */
 
 .link-sns-login.icon-naver {
   border-color: #00bf18;
   background-image: url("images/icon_naver.png");
 }
 
-.link-sns-login.icon-naver::before {
-}
-
 .link-sns-login.icon-facebook {
   border-color: #2d9cb8;
   background-image: url("images/icon_facebook.png");
+  background-position: 20px center;
 }
 
 .link-sns-login.icon-kakao {
