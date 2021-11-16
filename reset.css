@@ -127,3 +127,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+.sr-only {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
