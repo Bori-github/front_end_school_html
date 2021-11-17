@@ -79,3 +79,22 @@
   width: 80%;
   text-align: center;
 }
+
+/* result.html */
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.result img {
+  width: 80%;
+  max-width: 500px;
+}
+
+.result p {
+  width: 70%;
+}
