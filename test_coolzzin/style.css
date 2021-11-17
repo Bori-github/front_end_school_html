@@ -74,3 +74,8 @@
   font-size: 32px;
   font-weight: 700;
 }
+
+.questions .question p {
+  width: 80%;
+  text-align: center;
+}
