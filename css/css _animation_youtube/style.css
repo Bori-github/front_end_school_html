@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@keyframes obj-rotate {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  100% {
+    transform: scale(1.5) rotateY(-1turn);
+  }
+}
+
+@keyframes scene-rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}
+
+@keyframes scene-rotate-sm {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+body {
+  /* width: 100vh; */
+  overflow: hidden;
+  height: 100vh;
+  background: #355c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #c06c84,
+    #6c5b7b,
+    #355c7d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #c06c84,
+    #6c5b7b,
+    #355c7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.container .ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  transform: translate(-50%, -50%);
+}
+
+.scene {
+  transform-style: preserve-3d;
+  /* 나중에 회전 */
+  animation: scene-rotate 10s linear infinite alternate;
+}
+
+.scene .circle {
+  font-size: 40px;
+  font-weight: bold;
+  /* 나중에 작성 */
+  animation: obj-rotate 15s linear infinite;
+  transform-style: preserve-3d;
+}
+.scene .circle .word {
+  transform-style: preserve-3d;
+}
+.scene .circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(calc(var(--char-index) * 11deg)) translateX(-50%)
+    translateY(-50%) translateZ(350px);
+}
+
+.scene-sm {
+  animation: scene-rotate-sm 10s linear infinite alternate;
+}
+.scene-sm .circle {
+  font-size: 20px;
+  font-weight: bold;
+  /* 나중에 작성 */
+  animation: obj-rotate 5s linear infinite;
+  transform-style: preserve-3d;
+}
+.scene-sm .circle .word {
+  transform-style: preserve-3d;
+}
+.scene-sm .circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(calc(var(--char-index) * 11deg)) translateX(-50%)
+    translateY(-50%) translateZ(220px);
+}
