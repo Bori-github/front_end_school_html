@@ -3,5 +3,257 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
 
 body {
+  background-color: #eae8fe;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tit-app {
+  width: 386px;
+  margin-bottom: 65px;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto 170px;
+}
+
+.container article {
+  width: 378px;
+  box-sizing: border-box;
+}
+
+/* article.vending-machine */
+.vending-machine {
+  margin-right: 28px;
+  padding: 31px 27px 28px;
+  background-color: #fff;
+}
+.vending-machine .list-items {
+  overflow: hidden;
+}
+
+.list-items li {
+  overflow: hidden;
+  float: left;
+  width: 94px;
+  height: 136px;
+  margin: 0 12px 12px 0;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+.list-items li:nth-of-type(3n) {
+  margin-right: 0;
+}
+.list-items li.selected {
+  border-color: #6327fe;
+  filter: none;
+}
+.list-items li.sold-out {
+  position: relative;
+  filter: none;
+}
+.list-items li.sold-out::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/Sold-out.png") no-repeat center center
+    rgba(0, 0, 0, 0.8);
+  background-size: 70%;
+}
+.list-items .btn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 94px;
+  height: 136px;
+  padding: 10px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.btn-item .img-item {
+  width: 36px;
+  height: 65px;
+}
+.btn-item .tit-item {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13px;
+}
+.btn-item .txt-item {
+  width: 70px;
+  padding: 5px 0;
+  border-radius: 50px;
+  background-color: #6327fe;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.cont-return,
+.cont-put,
+.cont-get {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.cont-return .info-balance,
+.cont-put .inp-put,
+.cont-get .list-item-staged {
+  width: 212px;
+  padding: 6px 10px 7px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.cont-return .info-balance {
+  background-color: #eae8fe;
+}
+.cont-return .info-balance .txt-balance {
+  float: right;
+}
+.cont-return .btn-return,
+.cont-put .btn-put,
+.cont-get .btn-get {
+  width: 94px;
+  padding: 6px 0 7px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+  font-size: 13px;
+  line-height: 29px;
+}
+.cont-put .inp-put {
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+.cont-put .inp-put::placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.cont-get .list-item-staged,
+.cont-myitems .list-item-staged {
+  overflow-y: scroll;
+  height: 106px;
+  padding: 12px 16px 12px 12px;
+  border: 1px solid #bdbdbd;
+  background-color: #eae8fe;
+}
+.cont-get .list-item-staged::-webkit-scrollbar,
+.cont-myitems .list-item-staged::-webkit-scrollbar {
+  /* display: none; */
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+.cont-get .list-item-staged .item-staged,
+.cont-myitems .list-item-staged .item-staged {
+  overflow: hidden;
+  padding: 8px 8px 8px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.cont-get .list-item-staged .item-staged + .item-staged,
+.cont-myitems .list-item-staged .item-staged + .item-staged {
+  margin-top: 6px;
+}
+.cont-get .list-item-staged .img-item,
+.cont-myitems .list-item-staged .img-item {
+  width: 18px;
+  height: 33px;
+}
+.cont-get .list-item-staged .tit-item,
+.cont-myitems .list-item-staged .tit-item {
+  margin-left: 10px;
+  font-size: 9px;
+  line-height: 33px;
+}
+.cont-get .list-item-staged .num-counter,
+.cont-myitems .list-item-staged .num-counter {
+  float: right;
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+.cont-get .btn-get {
+  height: 106px;
+  background-color: #6327fe;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  color: #fff;
+  font-weight: 700;
+}
+
+/* section.my-info */
+.my-info .cont-mymoney {
+  margin-bottom: 20px;
+  padding: 9px 27px;
+  background-color: #fff;
+}
+.cont-mymoney .info-mymoney {
+  padding: 6px 10px;
+  border: 5px;
+  background: #eae8fe;
+  font-size: 14px;
+  line-height: 20px;
+}
+.cont-mymoney .txt-mymoney {
+  float: right;
+  font-weight: 700;
+}
+
+.my-info .cont-myitems {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 27px;
+  background-color: #fff;
+}
+.cont-myitems .tit-myitems {
+  align-self: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.cont-myitems .list-item-staged {
+  height: 414px;
+  margin: 13px 0 6px;
+  border-radius: 5px;
+}
+
+.my-info .tit-total {
+  align-self: flex-end;
+  font-size: 12px;
+  line-height: 17px;
 }
