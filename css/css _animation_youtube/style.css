@@ -9,6 +9,15 @@
   }
 }
 
+@keyframes star-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1turn);
+  }
+}
+
 @keyframes scene-rotate {
   0% {
     transform: rotateZ(0);
@@ -27,24 +36,24 @@
   }
 }
 
+@keyframes scene-rotate-star {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
 body {
-  /* width: 100vh; */
   overflow: hidden;
   height: 100vh;
-  background: #355c7d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #c06c84,
-    #6c5b7b,
-    #355c7d
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #c06c84,
-    #6c5b7b,
-    #355c7d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #355c7d;
+  background: -webkit-linear-gradient(to top, #c06c84, #6c5b7b, #355c7d);
+  background: linear-gradient(to top, #c06c84, #6c5b7b, #355c7d);
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
@@ -86,7 +95,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   /* 나중에 작성 */
-  animation: obj-rotate 15s linear infinite;
+  animation: obj-rotate 15s linear infinite alternate;
   transform-style: preserve-3d;
 }
 .scene .circle .word {
@@ -103,20 +112,57 @@ body {
 .scene-sm {
   animation: scene-rotate-sm 10s linear infinite alternate;
 }
-.scene-sm .circle {
+.scene-sm .circle-sm {
   font-size: 20px;
   font-weight: bold;
   /* 나중에 작성 */
-  animation: obj-rotate 5s linear infinite;
+  animation: obj-rotate 5s linear infinite alternate;
   transform-style: preserve-3d;
 }
-.scene-sm .circle .word {
+.scene-sm .circle-sm .word {
   transform-style: preserve-3d;
 }
-.scene-sm .circle span {
+.scene-sm .circle-sm span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: rotateY(calc(var(--char-index) * 11deg)) translateX(-50%)
+    translateY(-50%) translateZ(220px);
+}
+
+.scene-star {
+  transform: rotateZ(-50deg);
+}
+.scene-star .star {
+  animation: star-rotate 2s linear infinite;
+  transform-style: preserve-3d;
+}
+.scene-star .star .word {
+  transform-style: preserve-3d;
+}
+.scene-star .star span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(calc(var(--char-index) * 3deg)) translateX(-50%)
+    translateY(-50%) translateZ(530px);
+}
+
+.scene-star-big {
+  transform: rotateZ(180deg);
+}
+.scene-star-big .star-big {
+  font-size: 30px;
+  animation: star-rotate 2s linear infinite;
+  transform-style: preserve-3d;
+}
+.scene-star-big .star-big .word {
+  transform-style: preserve-3d;
+}
+.scene-star-big .star-big span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(calc(var(--char-index) * 3deg)) translateX(-50%)
     translateY(-50%) translateZ(220px);
 }
