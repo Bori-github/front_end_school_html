@@ -51,6 +51,7 @@ body {
   right: -4px;
   bottom: -4px;
   left: -4px;
+  z-index: -1;
   border: 3px solid #f8e4ff;
   border-radius: 13px;
 }
