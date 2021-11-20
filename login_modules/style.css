@@ -129,6 +129,7 @@ body {
   border-radius: 2px;
   outline-offset: 2px; /* 요소와의 거리 */
 }
+
 /* 내가 작성한 코드 */
 /* .form-login .inp-hold:focus + .labl-hold::after {
   content: "";

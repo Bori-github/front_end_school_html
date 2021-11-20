@@ -67,6 +67,7 @@
         list.classList.toggle("on");
       });
       list.addEventListener("click", (event) => {
+        console.log(event);
         if (event.target.nodeName === "BUTTON") {
           btn.innerText = event.target.innerText;
           list.classList.remove("on");
