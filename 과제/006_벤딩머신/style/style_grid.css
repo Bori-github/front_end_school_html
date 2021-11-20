@@ -18,7 +18,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: repeat(2, 360px);
+  /* grid-template-columns: repeat(2, 360px); */
   gap: 28px;
   margin-bottom: 150px;
 }
@@ -71,13 +71,14 @@ body {
 
 /* section.vending-machine */
 .vending-machine {
+  grid-column: 1 / 2;
   padding: 30px 30px 30px 27px;
   background-color: #fff;
 }
 .vending-machine .list-items {
   display: grid;
   grid-template-columns: repeat(3, 96px);
-  grid-template-rows: repeat(2, 136px);
+  grid-template-rows: repeat(2, minmax(136px, auto));
   gap: 6px;
 }
 .list-items li {
@@ -151,7 +152,6 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-
 .cont-mycart .info-balance {
   overflow: hidden;
   background-color: #eae8fe;
@@ -159,7 +159,6 @@ body {
 .cont-mycart .info-balance .txt-balance {
   float: right;
 }
-
 .cont-mycart .inp-insert {
   border: 1px solid #bdbdbd;
   background: #fff;
@@ -168,7 +167,6 @@ body {
   color: #bdbdbd;
   font-size: 13px;
 }
-
 .cont-mycart .cart-mycart__col-right {
   padding: 6px 0 7px;
   box-sizing: border-box;
@@ -187,8 +185,9 @@ body {
 /* section.my-page */
 .my-page {
   display: grid;
-  grid-template-rows: 50px 484px;
+  grid-column: 2 / 3;
   row-gap: 20px;
+  width: 357px;
 }
 
 .my-page .cont-mymoney {
@@ -198,7 +197,7 @@ body {
 .cont-mymoney .info-mymoney {
   overflow: hidden;
   padding: 6px 10px;
-  border: 5px;
+  border-radius: 5px;
   background: #eae8fe;
   font-size: 14px;
   line-height: 20px;
@@ -220,8 +219,9 @@ body {
   line-height: 20px;
 }
 .cont-myitems .list-items-cart {
-  height: 352px;
+  height: 378px;
   margin: 13px 0 6px;
+  box-sizing: border-box;
   border-radius: 5px;
   text-align: left;
 }
@@ -229,4 +229,47 @@ body {
   float: right;
   font-size: 12px;
   line-height: 17px;
+}
+
+/* Ref */
+/* 
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+} */
+
+@media screen and (min-width: 320px) /* 기기의 넓이가 320px 이상 */ and (max-width: 480px) {
+  body {
+    background-color: #fff;
+  }
+
+  .tit-app {
+    width: 166px;
+    margin-bottom: 16px;
+  }
+
+  #app {
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  /* section.vending-machine */
+  .vending-machine {
+    padding-bottom: 20px;
+    grid-row: 1 / 2;
+  }
+
+  /* section.my-page */
+  .my-page {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    row-gap: 0;
+  }
+
+  .my-page .cont-mymoney {
+    padding: 0 27px;
+  }
+
+  .my-page .cont-myitems {
+    padding: 41px 27px;
+  }
 }

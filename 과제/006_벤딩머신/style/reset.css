@@ -136,7 +136,7 @@ button {
   cursor: pointer;
 }
 img {
-  /* width: 100%; */
+  width: 100%;
   vertical-align: top;
 }
 .sr-only {
