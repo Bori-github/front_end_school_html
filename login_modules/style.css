@@ -103,18 +103,96 @@ body {
   text-align: left;
 }
 .form-login .labl-hold {
+  position: relative;
   display: block;
+  margin: 17px 0 21px;
   text-align: left;
-}
-.form-login .labl-hold:focus-visible {
-  outline: 1px solid #000;
+  cursor: pointer;
+  user-select: none;
 }
 .form-login .labl-hold::before {
   display: inline-block;
   content: "";
   width: 22px;
   height: 22px;
-  margin-right: 5px;
+  margin-right: 8px;
   background-image: url("images/icon_check_empty.png");
   vertical-align: -5px;
+}
+.form-login .inp-hold:checked + .labl-hold::before {
+  background-image: url("images/icon_check.png");
+}
+
+/* 접근성 */
+.form-login .inp-hold:focus + .labl-hold::before {
+  outline: 3px solid #000;
+  border-radius: 2px;
+  outline-offset: 2px; /* 요소와의 거리 */
+}
+
+/* .form-login .inp-hold:focus + .labl-hold::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  bottom: -3px;
+  width: 145px;
+  border: 2px solid #000;
+  border-radius: 3px;
+} */
+
+.form-login a[class^="link"] {
+  display: inline-block;
+  margin-top: 20px;
+  color: #767676;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form-login .link-signup::after {
+  display: inline-block;
+  content: "\007c";
+  margin: 0 8px 0 12px;
+}
+
+.cont-form-login .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  box-sizing: content-box;
+}
+
+.cont-form-login .cont-sns-login {
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 24px 25px;
+}
+.cont-sns-login::before {
+  display: block;
+  content: "또는";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 18px;
+  background-color: #fff;
+  color: #767676;
+  text-align: center;
+}
+.cont-sns-login::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+.cont-sns-login .list-sns li + li {
+  margin-top: 10px;
 }
