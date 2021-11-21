@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* section.cont-movie-detail */
+#app .cont-movie-detail {
+  position: relative;
+  width: 608px;
+  height: 500px;
+  padding: 52px 52px 52px 266px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #333;
+  color: #fff;
+}
+
+.cont-movie-detail .img-poster {
+  position: absolute;
+  left: -64px;
+  width: 281px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+}
+
+.cont-movie-detail .info-movie {
+  color: #bdbdbd;
+  font-size: 16px;
+  line-height: 23px;
+}
+.info-movie .movie-genre::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  margin: 0 10px;
+  background-color: #bdbdbd;
+}
+
+.cont-movie-detail .tit-movie {
+  margin: 13px 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+}
+.cont-movie-detail .txt-movie-detail {
+  line-height: 1.5;
+}
+
+.cont-movie-detail .list-btn {
+  display: flex;
+  margin: 50px 0 22px;
+}
+.list-btn li + li {
+  margin-left: 20px;
+}
+.list-btn .btn-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: none;
+  color: #fff;
+  line-height: 60px;
+}
+.list-btn .icon-thumb {
+  background: url("../images/icons/icon_thumbs_up.png") no-repeat center 45%;
+  background-size: 29px;
+  transition: background 0.2s;
+}
+.list-btn .icon-heart {
+  background: url("../images/icons/icon_heart.png") no-repeat center center;
+  background-size: 29px;
+  transition: background 0.2s;
+}
+.list-btn .icon-thumb:hover {
+  background-color: #2f80ed;
+  background-image: url("../images/icons/icon_thumbs_up_fill.png");
+}
+.list-btn .icon-heart:hover {
+  background-color: #eb5757;
+  background-image: url("../images/icons/icon_heart_fill.png");
+  background-size: 26px;
+}
+
+.cont-score .tit-score {
+  margin-bottom: 16px;
+  color: #f2f2f2;
+  font-size: 16px;
+  line-height: 23px;
+}
+.cont-score .list-icon-score {
+  display: flex;
+  align-items: center;
+}
+.list-icon-score .btn-score {
+  width: 51px;
+  height: 51px;
+  border: 0;
+  background: url("../images/icons/icon_empty_star.png") no-repeat center center;
+  background-size: 51px;
+}
+.list-icon-score .btn-score.score-hlaf {
+  background-image: url("../images/icons/icon_half_star.png");
+}
+.list-icon-score .btn-score.score-fill {
+  background-image: url("../images/icons/icon_star.png");
+}
+
+.cont-movie-detail .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  background: url("../images/icons/x-circle.png") no-repeat center center;
+  background-size: 25px;
+}
