@@ -116,7 +116,7 @@ body {
 
 .list-movie .tit-movie {
   font-weight: 900;
-  list-style: 23px;
+  line-height: 23px;
 }
 
 .list-movie .list-movie-info {
