@@ -13,14 +13,12 @@ body {
 
 .tit-app {
   width: 386px;
-  margin-bottom: 65px;
 }
 
 #app {
   display: grid;
-  /* grid-template-columns: repeat(2, 360px); */
   gap: 28px;
-  margin-bottom: 150px;
+  margin: 65px 0;
 }
 
 /* Common style - ul.list-items-cart*/
@@ -70,7 +68,7 @@ body {
 }
 
 /* section.vending-machine */
-.vending-machine {
+#app .vending-machine {
   grid-column: 1 / 2;
   padding: 30px 30px 30px 27px;
   background-color: #fff;
@@ -183,7 +181,7 @@ body {
 }
 
 /* section.my-page */
-.my-page {
+#app .my-page {
   display: grid;
   grid-column: 2 / 3;
   row-gap: 20px;
@@ -231,44 +229,52 @@ body {
   line-height: 17px;
 }
 
-/* Ref */
-/* 
-@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-} */
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  .tit-app {
+    width: 276px;
+  }
 
-@media screen and (min-width: 320px) /* 기기의 넓이가 320px 이상 */ and (max-width: 480px) {
+  /* section.vending-machine */
+  #app .vending-machine {
+    grid-row: 1 / 2;
+  }
+
+  /* section.my-page */
+  #app .my-page {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
     background-color: #fff;
   }
 
   .tit-app {
     width: 166px;
-    margin-bottom: 16px;
   }
 
   #app {
     gap: 0;
-    margin-bottom: 0;
+    margin: 16px 0 0;
   }
 
   /* section.vending-machine */
-  .vending-machine {
+  #app .vending-machine {
     padding-bottom: 20px;
     grid-row: 1 / 2;
   }
 
   /* section.my-page */
-  .my-page {
-    display: grid;
+  #app .my-page {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     row-gap: 0;
   }
-
   .my-page .cont-mymoney {
     padding: 0 27px;
   }
-
   .my-page .cont-myitems {
     padding: 41px 27px;
   }
