@@ -54,6 +54,7 @@
 
 .link-sns-login {
   display: block;
+  position: relative;
   padding: 15px 0 16px;
   box-sizing: border-box;
   border: 1px solid #767676;
@@ -63,22 +64,40 @@
   font-weight: 500;
   line-height: 20px;
   text-align: center;
-  background: url("images/icon_google.png") no-repeat 15px center;
-  background-size: auto 22px;
 }
-
 .link-sns-login.icon-naver {
   border-color: #00bf18;
-  background-image: url("images/icon_naver.png");
+  /* background-image: url("images/icon_naver.png"); */
 }
-
 .link-sns-login.icon-facebook {
   border-color: #2d9cb8;
-  background-image: url("images/icon_facebook.png");
-  background-position: 20px center;
+  /* background-image: url("images/icon_facebook.png"); */
+  /* background-position: 20px center; */
 }
-
 .link-sns-login.icon-kakao {
   border-color: #f2c94c;
-  background-image: url("images/icon_kakao.png");
+  /* background-image: url("images/icon_kakao.png"); */
+}
+
+.link-sns-login::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  content: "";
+  width: 44px;
+  height: 44px;
+  background: url("images/icon_sprites.png") no-repeat;
+  background-size: auto 44px;
+}
+.link-sns-login.icon-google::before {
+  background-position: -25px;
+}
+.link-sns-login.icon-naver::before {
+  background-position: -108px;
+}
+.link-sns-login.icon-facebook::before {
+  background-position: 12px;
+}
+.link-sns-login.icon-kakao::before {
+  background-position: -66px;
 }
