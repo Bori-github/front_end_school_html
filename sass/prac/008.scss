@@ -1,0 +1,23 @@
+$font-sizes-my: (
+  "regular": 14px,
+  "medium": 16px,
+  "large": 20px,
+);
+$font-sizes: (
+  "h1": 45px,
+  "h2": 19px,
+  "p": 16px,
+);
+
+div {
+  font-size: map-get($font-sizes-my, "regular");
+}
+
+section {
+  h2 {
+    font-size: map-get($font-sizes, "h1"); // 500
+  }
+}
+section {
+  font-size: map-get($font-sizes, "h3"); // null
+}
