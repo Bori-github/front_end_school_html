@@ -1,0 +1,27 @@
+@debug 100 > 50; // true
+@debug 10px < 17px; // true
+@debug 96px >= 1in; // true
+@debug 1000ms <= 1s; // true
+
+// Error: Incompatible units px and s
+// @debug 100px > 10s;
+
+// Not Error
+@debug 100 > 50px; // true
+@debug 10px < 17; // true
+
+// 숫자
+@debug 1px == 1px; // true
+
+// 문자
+@debug "Open Sans" != "Roboto"; // true
+
+// 산술 연산자
+@debug 10s + 15s; // 25s
+@debug 1in - 10px; // 0.8958333333in
+@debug 5px * 3px; // 15px
+@debug (
+  6px / 3px
+); // 2px, 나누기의 슬래쉬는 리스트에서도 사용하므로 혼동되지 않도록 괄호를 사용해준다
+@debug 1in % 9px; // 0.0625in (1in == 96px)
+@debug 15px % 9px; // 6px, 몫이 1 나머지가 6px

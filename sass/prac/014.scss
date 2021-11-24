@@ -1,0 +1,30 @@
+/*.card와 .aside 클래스 선택자의 적용한 스타일이 겹침*/
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+/* mixin을 이용해서 코드 간결화 */
+@mixin flex-normal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  @include flex-normal();
+  background: gray;
+}
+.aside3 {
+  @include flex-normal();
+  background: white;
+}
