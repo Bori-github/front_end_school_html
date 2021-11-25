@@ -10,12 +10,14 @@ $font-sizes: 10px 20px 30px 40px 50px 60px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    font-size: #{$i * 10}px;
   }
 }
 
+// 내가 넣은 폰트 사이즈
 @each $size in $font-sizes {
   $i: index($font-sizes, $size);
-  .color-circle:nth-child(#{$i}) {
+  .font:nth-child(#{$i}) {
     font-size: $size;
   }
 }
