@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* 여러줄 주석은 볼 수 있다. */
+ul li {
+  color: aqua;
+  font-size: 20px; }
+
+.one {
+  color: antiquewhite; }
+  .one .two {
+    color: brown; }
+    .one .two .three {
+      font-size: 20px; }
+    .one .two .four {
+      font-size: 30px; }

@@ -1,0 +1,24 @@
+{
+  "name": "front_end_school_html",
+  "version": "1.0.0",
+  "description": "* https://bori-github.github.io/front_end_school_html/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass test.scss test.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bori-github/front_end_school_html.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bori-github/front_end_school_html/issues"
+  },
+  "homepage": "https://github.com/Bori-github/front_end_school_html#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
