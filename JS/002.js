@@ -29,3 +29,9 @@ var MyVal8 = "호준 선생님";
 
 window.alert(myVal8);
 window.alert(MyVal8);
+
+// window 없이 사용 가능
+alert(myVal8);
+alert(MyVal8);
+
+var 재현 = "선생님";
