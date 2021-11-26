@@ -61,7 +61,11 @@ document.write(typeof NaN === "number", "<br>"); // true
 // let number = 0xff; //0 ~ f -> 10
 // let number = parseInt('13', 10)
 let number = parseFloat("13.3px.10", 10);
+let number2 = parseFloat("r13.3px.10", 10);
+// parseFloat 소수가 아닌 것을 소수인 것으로 바꿔줌
+// "13.3px.10" => 문자인데 작동한다 => parseFloat이 아는 부분까지만 나타냄
 
 document.write(number, "<br>");
+document.write(number2, "<br>");
 document.write(0.1 + 0.2 == 0.3, "<br>");
 document.write(9999999999999999999, "<br>");
