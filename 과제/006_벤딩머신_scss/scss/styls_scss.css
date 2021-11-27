@@ -3,6 +3,181 @@
   width: 386px;
 }
 
+#app {
+  display: -ms-grid;
+  display: grid;
+  gap: 28px;
+  margin: 65px 0;
+}
+
+#app .vending-machine {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 30px 30px 30px 27px;
+  background-color: #fff;
+}
+
+.vending-machine .list-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (96px)[3];
+      grid-template-columns: repeat(3, 96px);
+  -ms-grid-rows: (minmax(136px, auto))[2];
+      grid-template-rows: repeat(2, minmax(136px, auto));
+  gap: 12px;
+}
+
+.vending-machine .list-items li {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.vending-machine .list-items li.selected {
+  position: relative;
+}
+
+.vending-machine .list-items li.selected::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px solid #6327fe;
+  border-radius: 10px;
+}
+
+.vending-machine .list-items li.sold-out {
+  position: relative;
+}
+
+.vending-machine .list-items li.sold-out::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  background: url("../img/Sold-out.png") no-repeat center center rgba(0, 0, 0, 0.8);
+  background-size: 70%;
+}
+
+.vending-machine .list-items .btn-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.vending-machine .list-items .btn-item .img-item {
+  width: 36px;
+  height: 65px;
+}
+
+.vending-machine .list-items .btn-item .tit-item {
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.vending-machine .list-items .btn-item .txt-item {
+  width: 70px;
+  padding: 5px 0;
+  border-radius: 50px;
+  background-color: #6327fe;
+  color: #fff;
+  font-size: 12px;
+}
+
+.vending-machine .cont-mycart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 195px 93px;
+      grid-template-columns: 195px 93px;
+  -ms-grid-rows: 33px 33px 106px;
+      grid-template-rows: 33px 33px 106px;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.vending-machine .cont-mycart .cart-mycart__col-left {
+  padding: 6px 10px 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.vending-machine .cont-mycart .info-balance {
+  overflow: hidden;
+  background-color: #eae8fe;
+}
+
+.vending-machine .cont-mycart .info-balance .txt-balance {
+  float: right;
+}
+
+.vending-machine .cont-mycart .inp-insert {
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+
+.vending-machine .cont-mycart .inp-insert::-webkit-input-placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.vending-machine .cont-mycart .inp-insert:-ms-input-placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.vending-machine .cont-mycart .inp-insert::-ms-input-placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.vending-machine .cont-mycart .inp-insert::placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.vending-machine .cont-mycart .cart-mycart__col-right {
+  padding: 6px 0 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+}
+
+.vending-machine .cont-mycart .btn-get {
+  background-color: #6327fe;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 700;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
