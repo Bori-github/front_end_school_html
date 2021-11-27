@@ -4,3 +4,19 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin itemAfter($t: 0, $r: 0, $b: 0, $l: 0, $border-r: $border-r-10) {
+  content: "";
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  border-radius: $border-r;
+}
+
+@mixin fontStyle($c, $s, $w: $font-w-500) {
+  color: $c;
+  font-size: $s;
+  font-weight: $w;
+}
