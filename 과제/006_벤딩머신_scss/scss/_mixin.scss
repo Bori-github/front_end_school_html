@@ -5,6 +5,13 @@
   justify-content: $justify;
 }
 
+@mixin grid($cols, $rows, $g) {
+  display: grid;
+  grid-template-columns: $cols;
+  grid-template-rows: $rows;
+  gap: $g;
+}
+
 @mixin itemAfter($t: 0, $r: 0, $b: 0, $l: 0, $border-r: $border-r-10) {
   content: "";
   position: absolute;
@@ -15,8 +22,9 @@
   border-radius: $border-r;
 }
 
-@mixin fontStyle($c, $s, $w: $font-w-500) {
+@mixin fontStyle($c, $s, $w: $font-w-500, $l: null) {
   color: $c;
   font-size: $s;
   font-weight: $w;
+  line-height: $l;
 }

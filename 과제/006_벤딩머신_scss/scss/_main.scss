@@ -1,6 +1,5 @@
 #app {
-  display: grid;
-  gap: 28px;
+  @include grid(null, null, 28px);
   margin: 65px 0;
   .vending-machine {
     grid-column: 1 / 2;
@@ -11,10 +10,7 @@
 
 .vending-machine {
   .list-items {
-    display: grid;
-    grid-template-columns: repeat(3, 96px);
-    grid-template-rows: repeat(2, minmax(136px, auto));
-    gap: 12px;
+    grid(repeat(3, 96px), repeat(2, minmax(136px, auto)), 12px);
     li {
       border-radius: $border-r-10;
       box-shadow: $shadow-25;
@@ -62,18 +58,13 @@
 
 .vending-machine {
   .cont-mycart {
-    display: grid;
-    grid-template-columns: 195px 93px;
-    grid-template-rows: 33px 33px 106px;
-    gap: 12px;
+    @include grid(195px 93px, 33px 33px 106px, 12px);
     margin-top: 20px;
     .cart-mycart__col-left {
       padding: 6px 10px 7px;
       box-sizing: border-box;
       border-radius: $border-r-5;
-      @include fontStyle(null, $font-14);
-      font-size: $font-14;
-      line-height: 20px;
+      @include fontStyle(null, $font-14, null, 20px);
     }
     .info-balance {
       overflow: hidden;
@@ -101,7 +92,7 @@
     .btn-get {
       background-color: $main-color;
       box-shadow: $shadow-50;
-      @include fontStyle($white, $font-13, $font-w-700);
+      @include fontStyle($white, null, $font-w-700);
     }
   }
 }
