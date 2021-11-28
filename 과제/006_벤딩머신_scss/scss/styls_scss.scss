@@ -4,12 +4,11 @@
 
 @import "variables";
 @import "mixin";
+@import "header";
+@import "main";
 
 body {
   @include flex(column, center, null);
   background-color: $sub-color;
   font-family: $font-fam-main;
 }
-
-@import "header";
-@import "main";

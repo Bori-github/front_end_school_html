@@ -12,7 +12,7 @@
   gap: $g;
 }
 
-@mixin itemStyle($bd, $bd-r, $bg-c, $bx-s: null) {
+@mixin itemStyle($bd, $bd-r, $bg-c: null, $bx-s: null) {
   border: $bd;
   border-radius: $bd-r;
   background-color: $bg-c;
