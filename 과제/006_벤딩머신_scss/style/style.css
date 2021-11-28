@@ -6,7 +6,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   background-color: #eae8fe;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -262,15 +261,15 @@ body {
 
   /* section.vending-machine */
   #app .vending-machine {
-    padding-bottom: 20px;
     grid-row: 1 / 2;
+    padding-bottom: 20px;
   }
 
   /* section.my-page */
   #app .my-page {
+    row-gap: 0;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    row-gap: 0;
   }
   .my-page .cont-mymoney {
     padding: 0 27px;

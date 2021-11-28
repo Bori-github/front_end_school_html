@@ -1,3 +1,15 @@
 .tit-app {
   width: 386px;
 }
+
+@media screen and (max-width: $media-w-md) {
+  .tit-app {
+    width: 276px;
+  }
+}
+
+@media screen and (max-width: $media-w-sm) {
+  .tit-app {
+    width: 166px;
+  }
+}

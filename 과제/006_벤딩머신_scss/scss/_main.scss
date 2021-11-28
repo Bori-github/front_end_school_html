@@ -178,10 +178,6 @@
 }
 
 @media screen and (max-width: $media-w-md) {
-  .tit-app {
-    width: 276px;
-  }
-
   #app {
     .vending-machine {
       grid-row: 1 / 2;
@@ -194,10 +190,6 @@
 }
 
 @media screen and (max-width: $media-w-sm) {
-  .tit-app {
-    width: 166px;
-  }
-
   #app {
     gap: 0;
     margin: 16px 0 0;

@@ -12,3 +12,9 @@ body {
   background-color: $sub-color;
   font-family: $font-fam-main;
 }
+
+@media screen and (max-width: $media-w-sm) {
+  body {
+    background-color: $white;
+  }
+}

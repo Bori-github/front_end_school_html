@@ -3,6 +3,18 @@
   width: 386px;
 }
 
+@media screen and (max-width: 768px) {
+  .tit-app {
+    width: 276px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tit-app {
+    width: 166px;
+  }
+}
+
 #app {
   display: -ms-grid;
   display: grid;
@@ -307,9 +319,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .tit-app {
-    width: 276px;
-  }
   #app .vending-machine {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -326,9 +335,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .tit-app {
-    width: 166px;
-  }
   #app {
     gap: 0;
     margin: 16px 0 0;
@@ -369,5 +375,11 @@ body {
           align-items: center;
   background-color: #eae8fe;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: #fff;
+  }
 }
 /*# sourceMappingURL=styls_scss.css.map */
