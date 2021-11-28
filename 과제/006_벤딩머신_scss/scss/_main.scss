@@ -6,6 +6,11 @@
     padding: 30px 30px 30px 27px;
     background-color: $white;
   }
+  .my-page {
+    @include grid(null, null, 20px);
+    grid-column: 2 / 3;
+    width: 369px;
+  }
 }
 
 //  ul.list-items-cart
@@ -137,9 +142,6 @@
 
 // section.my-page
 .my-page {
-  @include grid(null, null, 20px);
-  grid-column: 2 / 3;
-  width: 369px;
   .cont-mymoney {
     padding: 9px 27px;
     background-color: $white;
@@ -172,5 +174,47 @@
   .tit-total {
     @include fontStyle(null, $font-12, null, 17px);
     float: right;
+  }
+}
+
+@media screen and (max-width: $media-w-md) {
+  .tit-app {
+    width: 276px;
+  }
+
+  #app {
+    .vending-machine {
+      grid-row: 1 / 2;
+    }
+    .my-page {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+}
+
+@media screen and (max-width: $media-w-sm) {
+  .tit-app {
+    width: 166px;
+  }
+
+  #app {
+    gap: 0;
+    margin: 16px 0 0;
+    .vending-machine {
+      grid-row: 1 / 2;
+      padding-bottom: 20px;
+    }
+    .my-page {
+      row-gap: 0;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      .cont-mymoney {
+        padding: 0 27px;
+      }
+      .cont-myitems {
+        padding: 41px 27px;
+      }
+    }
   }
 }

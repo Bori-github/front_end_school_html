@@ -18,6 +18,16 @@
   background-color: #fff;
 }
 
+#app .my-page {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  width: 369px;
+}
+
 .list-items-cart {
   border: 1px solid #bdbdbd;
   background-color: #eae8fe;
@@ -248,16 +258,6 @@
   font-weight: 700;
 }
 
-.my-page {
-  display: -ms-grid;
-  display: grid;
-  gap: 20px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  width: 369px;
-}
-
 .my-page .cont-mymoney {
   padding: 9px 27px;
   background-color: #fff;
@@ -304,6 +304,56 @@
   font-size: 12px;
   line-height: 17px;
   float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .tit-app {
+    width: 276px;
+  }
+  #app .vending-machine {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #app .my-page {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tit-app {
+    width: 166px;
+  }
+  #app {
+    gap: 0;
+    margin: 16px 0 0;
+  }
+  #app .vending-machine {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    padding-bottom: 20px;
+  }
+  #app .my-page {
+    row-gap: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #app .my-page .cont-mymoney {
+    padding: 0 27px;
+  }
+  #app .my-page .cont-myitems {
+    padding: 41px 27px;
+  }
 }
 
 body {
