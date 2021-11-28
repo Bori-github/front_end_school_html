@@ -8,12 +8,52 @@
   }
 }
 
+//  ul.list-items-cart
+.list-items-cart {
+  overflow-y: scroll;
+  padding: 12px 16px 12px 12px;
+  @include itemStyle($border-main, null, $sub-color);
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    @include itemStyle(null, $border-r-5, rgba(255, 255, 255, 0.8));
+  }
+  .item-cart {
+    overflow: hidden;
+    padding: 8px 8px 8px 10px;
+    @include itemStyle(null, $border-r-5, $white);
+  }
+  .item-cart + .item-cart {
+    margin-top: 6px;
+  }
+  .img-item {
+    width: 18px;
+    height: 33px;
+  }
+  .tit-item {
+    margin-left: 10px;
+    @include fontStyle(null, $font-9, null, 33px);
+  }
+  .num-counter {
+    float: right;
+    width: 31px;
+    height: 31px;
+    @include itemStyle($border-main, $border-r-5, null);
+    text-align: center;
+    line-height: 30px;
+  }
+}
+
+// section.vending-machine
 .vending-machine {
   .list-items {
-    grid(repeat(3, 96px), repeat(2, minmax(136px, auto)), 12px);
+    @include grid(repeat(3, 96px), repeat(2, minmax(136px, auto)), 12px);
     li {
-      border-radius: $border-r-10;
-      box-shadow: $shadow-25;
+      @include itemStyle(null, $border-r-10, null, $shadow-25);
       &.selected {
         position: relative;
       }
@@ -36,8 +76,7 @@
       width: 100%;
       height: 100%;
       padding: 10px 0;
-      border-radius: $border-r-10;
-      background-color: $white;
+      @include itemStyle(null, $border-r-10, $white);
       .img-item {
         width: 36px;
         height: 65px;
@@ -48,8 +87,7 @@
       .txt-item {
         width: 70px;
         padding: 5px 0;
-        border-radius: 50px;
-        background-color: $main-color;
+        @include itemStyle(null, 50px, $main-color);
         @include fontStyle($white, $font-12);
       }
     }
@@ -58,7 +96,7 @@
 
 .vending-machine {
   .cont-mycart {
-    @include grid(195px 93px, 33px 33px 106px, 12px);
+    @include grid(204px 96px, 33px 33px 106px, 12px);
     margin-top: 20px;
     .cart-mycart__col-left {
       padding: 6px 10px 7px;
@@ -77,22 +115,58 @@
       border: $border-main;
       background: $white;
       &::placeholder {
-        color: #bdbdbd;
-        font-size: $font-13;
+        @include fontStyle(#bdbdbd, $font-13, null);
       }
     }
     .cart-mycart__col-right {
       padding: 6px 0 7px;
-      box-sizing: border-box;
-      border-radius: $border-r-5;
-      background-color: $white;
-      box-shadow: $shadow-25;
+      @include itemStyle(null, $border-r-5, $white, $shadow-25);
       @include fontStyle(null, $font-13);
     }
     .btn-get {
-      background-color: $main-color;
-      box-shadow: $shadow-50;
+      @include itemStyle(null, null, $main-color, $shadow-50);
       @include fontStyle($white, null, $font-w-700);
     }
+  }
+}
+
+// section.my-page
+.my-page {
+  @include grid(null, null, 20px);
+  grid-column: 2 / 3;
+  width: 369px;
+  .cont-mymoney {
+    padding: 9px 27px;
+    background-color: $white;
+    .info-mymoney {
+      overflow: hidden;
+      padding: 6px 10px;
+      @include itemStyle(null, $border-r-5, $sub-color);
+      @include fontStyle(null, $font-14, null, 20px);
+    }
+    .txt-mymoney {
+      float: right;
+      font-weight: $font-w-700;
+    }
+  }
+  .cont-myitems {
+    overflow: hidden;
+    padding: 25px 27px;
+    background-color: $white;
+    text-align: center;
+    .tit-myitems {
+      @include fontStyle(null, $font-14, null, 20px);
+    }
+    .list-items-cart {
+      height: 378px;
+      margin: 13px 0 6px;
+      box-sizing: border-box;
+      border-radius: $border-r-5;
+      text-align: left;
+    }
+  }
+  .tit-total {
+    float: right;
+    @include fontStyle(null, $font-12, null, 17px);
   }
 }

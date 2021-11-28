@@ -12,6 +12,14 @@
   gap: $g;
 }
 
+@mixin itemStyle($bd, $bd-r, $bg-c, $bx-s: null) {
+  border: $bd;
+  border-radius: $bd-r;
+  background-color: $bg-c;
+  box-sizing: border-box;
+  box-shadow: $bx-s;
+}
+
 @mixin itemAfter($t: 0, $r: 0, $b: 0, $l: 0, $border-r: $border-r-10) {
   content: "";
   position: absolute;
