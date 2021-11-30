@@ -62,7 +62,7 @@
 | `+`  | 덧셈            |
 | `-`  | 뺄셈            |
 | `*`  | 곱셈            |
-| `/`  | 나눗셈의 몫     |
+| `/`  | 나눗셈          |
 | `%`  | 나눗셈의 나머지 |
 | `**` | 거듭 제곱       |
 | `++` | 증가 연산자     |
@@ -129,8 +129,11 @@ for(let I = 0; I < 10; I++) {
 
 ### 함수
 
-- 매개변수(파라미터) : x, y
-- 전달인자(아규먼트) : 3, 5
+- 프로그램을 구성하는 주요 '구성 요소(building block)'
+  => 함수를 이용해 중복없이 유사한 동작을 하는 코드를 여러 번 호출할 수 있다.
+
+- 매개변수(parameter) : x, y
+- 전달인자(argument) : 3, 5
 
 ```javascript
 // 함수 선언(Function Declaration)
@@ -138,6 +141,7 @@ function add(x, y) {
   return x + y;
 }
 
+// 함수 호출
 add(3, 5); // 8
 
 // 함수 표현식(function Expression)
@@ -160,10 +164,22 @@ function cal(a, b) {
 cal(add, mul); // 120
 ```
 
-- 화살표함수
+### 화살표함수
+
+- 함수 표현식보다 단순하고 간결한 문법으로 함수를 만들 수 있는 방법
 
 ```javascript
-let addArrow = (x, y) => x + y;
+// 화살표 함수
+let funcArrow = (arg1, arg2) => expression;
+
+let funcArrow = (arg1, arg2) => {
+  return expression;
+};
+
+// 함수 표현식
+let func = function (arg1, arg2) {
+  return expression;
+};
 ```
 
 - 익명함수 : 함수를 변수에 저장하는 함수, 이름이 없다고 생각하기보다는 함수명 대신 변수명을 사용하여 호출
@@ -171,9 +187,8 @@ let addArrow = (x, y) => x + y;
 - 기명함수
 
 객체
-선언
+
 할당
-매개변수
 
 ### 구문(Syntax)
 
@@ -181,7 +196,6 @@ let addArrow = (x, y) => x + y;
 
 상수
 리턴
-인수
 
 ### console.log
 
@@ -214,6 +228,10 @@ let addArrow = (x, y) => x + y;
 ### 정규표현식
 
 - 특정한 문자열을 찾을 수 있는 표현식
+
+### 스코프(scope)
+
+- 함수가 실행될 때, 함수 내에서 변수에 대한 접근이 어떻게 되는지를 나타내는 용오
 
 ### 블록스코프
 
