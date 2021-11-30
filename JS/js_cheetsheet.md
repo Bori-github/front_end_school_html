@@ -1,36 +1,50 @@
 # Javascript Cheet Sheet
 
-### 변수(타입)
+### 🌽 변수(타입)
 
+- typeof로 확인 가능
 - 변수(variable) : 데이터를 저장할 때 쓰이는 '이름이 붙은 저장소'
 
-### 선언
+#### `var x;`
 
-- `var x` : 전역에서 사용할 변수값, 실무에서 되도록 사용하지 않음
-- `let x` :
-- `const x` :
+- 전역에서 사용할 변수 값
+- 블록 스코프가 아닌 함수 수준 스코프를 가짐
+- 선언하기 전 사용할 수 있음
+- 함수 스코프
+- 실무에서 되도록 사용하지 않음
 
-### Number(숫자)
+#### `let x;`
+
+- `let`이 표준에 도입된 이유가 `var`의 부작용을 없애기 위함
+- 재선언 불가, 재할당 가능
+- 블록 스코프
+
+#### `const x;`
+
+- `const`로 선언한 변수를 '상수(constant)'라고 한다. 상수는 재할당 할 수 없다.
+- 블록 스코프
+
+#### Number(숫자)
 
 - 형태 : 10, 3.14
 - 호출 : 변수명
 
-### String(문자열)
+#### String(문자열)
 
-- 형태 : ‘abd’, "abd", `abd`
+- 형태 : ‘abd’, "abd", \`abd`
 - 호출 : 변수명[0]
 
-### Array(배열)
+#### Array(배열)
 
 - 형태 : [‘하나’, ‘둘’, ‘셋’], [100, 200, 300]
 - 호출 : 변수명, 변수명[0], 변수명[0][0] => 변수명[index]
 
-### Boolean(논리값)
+#### Boolean(논리값)
 
 - 형태 : true, false
 - 호출 : 변수명
 
-### Object(객체)
+#### Object(객체)
 
 - 형태 : {
   “이름”: “이보리”,
@@ -39,23 +53,15 @@
   }
 - 호출 : 변수명, 변수명.이름, 변수명["이름"] => 변수명.key, 변수명[key]
 
-### undefined
+#### undefined : undefined
 
-- 형태 : undefined
+#### null : object
 
-### null
+#### NaN : number
 
-- 형태 : object
+### 🌽 연산자
 
-### NaN
-
-- 형태 : number
-
-  ***
-
-## 연산자
-
-### 기본 연산자
+#### 기본 연산자
 
 | 기호 | 설명            |
 | :--: | :-------------- |
@@ -68,7 +74,7 @@
 | `++` | 증가 연산자     |
 | `--` | 감소 연산자     |
 
-### 논리연산자
+#### 논리연산자
 
 |  기호  | 설명 |
 | :----: | :--- |
@@ -76,11 +82,11 @@
 |  `&&`  | AND  |
 | `\|\|` | OR   |
 
-### 비교연산자: ==, !=, ===, !==, >, >=, <, <=
+#### 비교연산자: ==, !=, ===, !==, >, >=, <, <=
 
-### 조건문: if, else, else if, switch
+#### 조건문: if, else, else if, switch
 
-### 반복문: for, for in, for of, forEach, while, do while, break, continue
+#### 반복문: for, for in, for of, forEach, while, do while, break, continue
 
 ```javascript
 let a = [10, 20, 30, 40];
@@ -88,18 +94,22 @@ let a = [10, 20, 30, 40];
 for(let i = 0; i < 10; i++) {
   console.log(i);
 }
+
 for (let i of a) {
   console.log(i);
 }
+
 for (let i in a) {
   console.log(i);
 }
 
 let x = 0;
+
 while (x < 10) {
   console.log(x);
   x++;
 }
+
 do {
   console.log(x);
   x++;
@@ -125,15 +135,21 @@ for(let I = 0; I < 10; I++) {
 둘 다 괄호 안에 들어가서 연산이 되어 나오는 것
 이것을 구분하 수 있는 것은 클래스 가서 배울 수 있다.
 
-## 함수
-
-### 함수
+### 🌽 함수
 
 - 프로그램을 구성하는 주요 '구성 요소(building block)'
   => 함수를 이용해 중복없이 유사한 동작을 하는 코드를 여러 번 호출할 수 있다.
 
-- 매개변수(parameter) : x, y
-- 전달인자(argument) : 3, 5
+#### 매개변수(parameter) : x, y
+
+#### 전달인자(argument) : 3, 5
+
+#### 반환 값(return value)
+
+- 함수를 호출했을 때 함수를 호출한 그곳에 특정 값을 반환하게 할 수 있다.
+- 특정 값 = 반환 값
+- `return`은 함수 내 어디서든 사용 가능
+- `return`을 만나면 함수 실행이 즉시 중단되고 함수를 호출한 곳에 값을 반환
 
 ```javascript
 // 함수 선언(Function Declaration)
@@ -150,7 +166,9 @@ let add = function (x, y) {
 };
 ```
 
-- 콜백함수 : 함수를 인자 값으로 전달해서 "나중에 호출(call back)"해서 사용하는 것
+### 🌽 콜백함수
+
+- 함수를 인자 값으로 전달해서 "나중에 호출(call back)"해서 사용하는 것
 
 ```javascript
 function mul(x, y) {
@@ -164,7 +182,7 @@ function cal(a, b) {
 cal(add, mul); // 120
 ```
 
-### 화살표함수
+### 🌽 화살표함수
 
 - 함수 표현식보다 단순하고 간결한 문법으로 함수를 만들 수 있는 방법
 
@@ -194,9 +212,6 @@ let func = function (arg1, arg2) {
 
 - 어떤 일을 하기 위해 실행
 
-상수
-리턴
-
 ### console.log
 
 ### 디버깅
@@ -216,9 +231,9 @@ let func = function (arg1, arg2) {
 - 조건문(if), 반복문(for)도 문장 : 이경우에는 마지막 } 뒤에 세미콜론을 붙이지 않음
 - 문장들이 모여 만들고자하는 프로그램이 됨.
 
-### 리터럴
+### 🌽 리터럴
 
-- 정리 필요
+- 리터럴은 직접 표현되는 값 그 자체를 의미
 
 ### DOM / BOM
 
@@ -229,11 +244,22 @@ let func = function (arg1, arg2) {
 
 - 특정한 문자열을 찾을 수 있는 표현식
 
-### 스코프(scope)
+### 🌽 스코프(scope)
 
-- 함수가 실행될 때, 함수 내에서 변수에 대한 접근이 어떻게 되는지를 나타내는 용오
+- 함수가 실행될 때, 함수 내에서 변수에 대한 접근이 어떻게 되는지를 나타내는 용어
+- 변수에 접근할 수 있는 범위
 
-### 블록스코프
+#### 함수 스코프
+
+- 자바스크립트는 기본적으로 함수 스코프를 따르는 언어
+- 새로운 함수가 생성될 때마다 새로운 스코프가 발생
+- 함수 몸체에 선언한 변수는 해당 함수 안에서만 접근 가능
+- 지역 스코프
+
+#### 블록 스코프
+
+- 블록`{}`이 생성될 때마다 새로운 스코프 생성
+- `let`과 `const` 키워드의 등장으로 블록 스코프를 형성하는 것이 가능해짐
 
 ```javascript
 if (true) {
@@ -243,11 +269,23 @@ if (true) {
 console.log(x); // not defined x
 ```
 
-### 전개 표현식(...)
+### 🌽 전개 문법(spread syntax)
+
+- 함수를 호출할 때 `...arr`를 사용하면, 이터러블 객체 `arr`이 인수 목록으로 '확장'됨
 
 ```javascript
-let x = [1, 2, 3, 4, 5];
-function add(...x) {
-  return x;
-}
+let str = "Hello";
+
+console.log([...str]); // H,e,l,l,o
+
+let arr = [3, 5, 1];
+let arr2 = [8, 9, 15];
+
+let merged = [0, ...arr, 2, ...arr2];
+
+console.log(merged); // 0,3,5,1,2,8,9,15 (0, arr, 2, arr2 순서로 합쳐집니다.)
 ```
+
+### 옵셔널 체이닝(Optional chaining) '?.'
+
+- 내용 추가하기
