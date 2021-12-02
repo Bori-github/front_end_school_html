@@ -41,6 +41,9 @@ console.log(fib(0));
 console.log(fib(1));
 console.log(fib(2));
 console.log(fib(3));
+console.log(fib(4));
+console.log(fib(5));
+console.log(fib(6));
 
 // 호출되는 것이 메모리를 차지하고 있으므로 아래 기법을 적절히 믹싱해서 사용할 필요가 있음
 // 반복문, 다이나믹 프로그래밍(메모이제이션(하향식), 타뷸레이션(상향식))
