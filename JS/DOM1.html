@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li id="first-item">one</li>
+      <li>two</li>
+      <li class="last-item">three</li>
+    </ul>
+
+    <script>
+      const item = document.getElementById("first-item");
+      const itemLast = document.getElementsByClassName("last-item"); //
+      console.log(itemLast); // HTMLCollection
+      console.log(itemLast[0]); // getElementById와 같은 값을 가져온다
+    </script>
+  </body>
+</html>
