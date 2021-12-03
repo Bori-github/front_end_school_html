@@ -19,4 +19,4 @@ while (lottoNum.size < 6) {
   lottoNum.add(randomNum(1, 46));
 }
 
-console.log(lottoNum);
+console.log([...lottoNum].sort((a, b) => a - b));
