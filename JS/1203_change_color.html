@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신호등</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style>
+      #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .box.red {
+        background-color: tomato;
+      }
+      .box.green {
+        background-color: mediumseagreen;
+      }
+      .box.blue {
+        background-color: cornflowerblue;
+      }
+
+      .list-btns {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin-top: 50px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: 2px solid #333;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #333;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn:hover {
+        color: #333;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="app">
+      <div class="box" id="box"></div>
+      <ul class="list-btns">
+        <li><button class="btn" id="red">red</button></li>
+        <li><button class="btn" id="green">green</button></li>
+        <li><button class="btn" id="blue">blue</button></li>
+      </ul>
+    </main>
+
+    <script>
+      const box = document.getElementById("box");
+
+      const redBtn = document.getElementById("red");
+      const greenBtn = document.getElementById("green");
+      const blueBtn = document.getElementById("blue");
+
+      let btnArr = [redBtn, greenBtn, blueBtn];
+      btnArr.forEach((item) => {
+        item.addEventListener("click", () => {
+          box.classList.remove("red", "green", "blue");
+          if (item.id === "red") {
+            box.classList.add("red");
+          } else if (item.id === "green") {
+            box.classList.add("green");
+          } else {
+            box.classList.add("blue");
+          }
+        });
+      });
+
+      // Eventlitseners
+      // redBtn.addEventListener("click", () => {
+      //   box.classList.remove("red", "green", "blue");
+      //   box.classList.toggle("red");
+      // });
+      // greenBtn.addEventListener("click", () => {
+      //   box.classList.remove("red", "green", "blue");
+      //   box.classList.toggle("green");
+      // });
+      // blueBtn.addEventListener("click", () => {
+      //   box.classList.remove("red", "green", "blue");
+      //   box.classList.toggle("blue");
+      // });
+    </script>
+  </body>
+</html>
