@@ -253,26 +253,84 @@ let func = function (arg1, arg2) {
 ### 🌽 스코프(scope)
 
 - 함수가 실행될 때, 함수 내에서 변수에 대한 접근이 어떻게 되는지를 나타내는 용어
-- 변수에 접근할 수 있는 범위
+- 변수에 접근할 수 있는 범위, 변수의 유효범위 또는 생존 범위
 
-#### 함수 스코프
+#### 전역 스코프(Global scope)
 
-- 자바스크립트는 기본적으로 함수 스코프를 따르는 언어
-- 새로운 함수가 생성될 때마다 새로운 스코프가 발생
-- 함수 몸체에 선언한 변수는 해당 함수 안에서만 접근 가능
-- 지역 스코프
+- 코드 어디에서든지 참조할 수 있다.
+- 전역 변수(Global variable) : 전역에서 선언된 변수미여 어디에든 참조할 수 있다.
 
-#### 블록 스코프
+#### 지역 스코프(Local scope or Function-level scope)
 
-- 블록`{}`이 생성될 때마다 새로운 스코프 생성
-- `let`과 `const` 키워드의 등장으로 블록 스코프를 형성하는 것이 가능해짐
+- 함수 코드 블록이 만든 스코프로 함수 자신과 하위 함수에서만 참조할 수 있다.
+- 지역 변수(Local variable) : 지역(함수) 내에서 선언된 변수이며 그 지역과 그 지역의 하부 지역에서만 참조할 수 있다.
+
+```javascript
+var x = "global x";
+var y = "global y";
+
+function outer() {
+  var z = "outer's local z";
+
+  console.log(x); // global x
+  console.log(y); // global y
+  console.log(z); // outer's local z
+
+  function inner() {
+    var x = "inner's local x";
+
+    console.log(x); // inner's local x
+    console.log(y); // global y
+    console.log(z); // outer's local z
+  }
+
+  inner();
+}
+
+outer();
+
+console.log(x); // global x
+console.log(z); // ReferenceError: z is not defined
+```
+
+#### 비 블록 레벨 스코프(Non block-level-scope)
 
 ```javascript
 if (true) {
-  let x = 100;
+  // 코드 블록 내에서 var x 선언
+  // 자바스크립트는 블록 레벨 스코프를 사용하지 않으므로
+  // 함수 밖에서 선언된 변수는 코드 블록 내에서 선언되었다 할지라도 모두 전역 스코프를 가짐
+  var x = "global x";
 }
 
-console.log(x); // not defined x
+console.log(x); // global x
+```
+
+#### 블록 레벨 스코프(Block-level-scope)
+
+- `var` 키워드로 선언한 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정하는 함수 레벨 스코프를 따름
+- `let`의 등장으로 블록 레벨 스코프를 형성하는 것이 가능해짐
+- `let`키워드로 선언한 변수는 모든 코드 블록(함수, if문, for문, while문, try/catch문 등)을 지역 스코프로 인정하는 블록 레
+
+```javascript
+// 전역 스코프
+let i = 10;
+
+// 함수 레벨 스코프
+function func() {
+  let i = 100;
+
+  // 블록 레벨 스코프
+  for (let i = 1; i < 3; i++) {
+    console.log(i); // 1 2
+  }
+
+  console.log(i); // 100
+}
+
+func();
+
+console.log(i); //10
 ```
 
 ### 🌽 전개 문법(spread syntax)
