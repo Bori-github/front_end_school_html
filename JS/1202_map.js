@@ -54,10 +54,10 @@ midScore.forEach((score) => (totalMidScore += score));
 avrMidScore = totalMidScore / data.length;
 console.log(avrMidScore);
 
-let data = [
+let data2 = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
 undefined;
-let newData = data.map((a) => a.map((n) => n * 2));
+let newData = data2.map((a) => a.map((n) => n * 2));
