@@ -39,19 +39,29 @@
       let maleAvrAge = 0;
 
       function averageAge(data) {
-        let female = data.map((i) => {
-          if (i.gender == "female") return i.age;
-        });
-        let male = data.map((i) => {
-          if (i.gender == "male") return i.age;
-        });
+        // let female = data.map((i) => {
+        //   if (i.gender == "female") return i.age;
+        //   else return 0;
+        // });
+        // let male = data.map((i) => {
+        //   if (i.gender == "male") return i.age;
+        //   else return 0;
+        // });
+
+        // filter는 2번 순회함 => for는 한 번 순회로 같은 결과를 만들 수 있다.
+        let male = data.filter((i) => i.gender === "male").map((i) => i.age);
+        let female = data
+          .filter((i) => i.gender === "female")
+          .map((i) => i.age);
 
         console.log(male);
+        console.log(female);
       }
 
       function sortTable(key) {
         if (click) {
           click = false;
+          // MDN에 정의되어 있는대로 사용한 것
           data.sort((a, b) => (a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0));
         } else {
           click = true;
