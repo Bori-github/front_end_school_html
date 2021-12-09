@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax 통신 연습</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .form {
+        padding: 30px;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+      input {
+        padding: 20px 30px 16px;
+        border: 2px solid #333;
+        border-radius: 50px;
+        text-align: center;
+      }
+      input:nth-of-type(2) {
+        margin: 10px 0 20px;
+      }
+      .loginBtn {
+        width: 100%;
+        padding: 15px 0;
+        border: 2px solid lightslategray;
+        border-radius: 50px;
+        background-color: lightslategray;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" class="form">
+      <input type="text" class="id" placeholder="아이디를 입력하세요." /><br />
+      <input
+        type="password"
+        class="pw"
+        placeholder="비밀번호를 입력하세요"
+      /><br />
+      <button type="button" class="loginBtn">Login</button>
+    </form>
+    <script>
+      let userData;
+
+      function success(userDataParams) {
+        document.write(`${userDataParams.name}님, 안녕하세요!`);
+      }
+
+      function fail() {
+        document.write("로그인에 실패했습니다. 다시 시도해주세요.");
+      }
+
+      $(".loginBtn").click(function () {
+        $.ajax({
+          url: "https://raw.githubusercontent.com//Bori-github/ajaxlogintest/main/userdata.json",
+          async: true,
+          success: function (response) {
+            // console.log(JSON.parse(response));
+            let id = $(".id").val();
+            let pw = $(".pw").val();
+
+            response = JSON.parse(response);
+            userData = response.find(
+              (user) => user.id === id && user.pw === pw
+            );
+
+            if (userData) {
+              success(userData);
+            } else {
+              fail();
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -11,10 +11,19 @@
       crossorigin="anonymous"
     ></script>
     <style>
+      .blue {
+        color: blue;
+      }
       .box {
         width: 200px;
         height: 200px;
         background-color: lightsalmon;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        opacity: 0.3;
+        background-color: red;
       }
     </style>
   </head>
@@ -66,6 +75,8 @@
     <div class="three blue">hello world</div>
 
     <div class="box"></div>
+    <div class="box2"></div>
+    <button class="btn3">누르면 animate</button>
 
     <script>
       // document.getElementById("one").innerHTML = "!!!";
@@ -103,10 +114,46 @@
       $("ul").append("<li>hello world end</li>");
 
       $("#div1").addClass("important");
-      $(".one, .two, p").removerClass("blue");
+      $(".one, .two, p").removeClass("blue");
       $(".three").toggleClass("blue");
 
       $(".box").fadeOut(3000).fadeIn(3000);
+
+      // dom이 준비되면 실행
+      $(function () {
+        // .box 클릭 시 보이지 않게
+        $(".box").click(function () {
+          $(this).hide();
+        });
+      });
+
+      // 제이쿼리 - animate
+      $(".btn3").click(function () {
+        $(".box2").animate(
+          {
+            width: "300px",
+            height: "300px",
+            opacity: 1,
+          },
+          "slow"
+        );
+
+        $(".box2").hover(
+          function () {
+            $(this).css("background-color", "yellow");
+          },
+          function () {
+            $(this).css("background-color", "blue");
+          }
+        );
+      });
+
+      $(".box2").mouseenter(function () {
+        alert("You entered p1!");
+      });
+      $(".box2").mouseleave(function () {
+        alert("Bye! You now leaved p1!");
+      });
     </script>
   </body>
 </html>
