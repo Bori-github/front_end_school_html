@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 id="one">jQuery 실습</h1>
+    <p>hide</p>
+    <button class="btn1">click</button>
+    <p class="practice">jQuery 실습</p>
+    <img />
+    <br />
+    <textarea name="메모장" id="메모장" cols="30" rows="10"></textarea>
+    <br />
+    <button class="btn2">메모장 내용 경고창으로 출력</button>
+    <p class="p3">메서드 체이닝</p>
+
+    <!-- 문제 -->
+    <!-- 
+      1. items 부모를 찾아 background-color를 파란색으로 변경
+      2. items 2번째 color를 빨간색으로 바꾸기
+      3. ul2의 자식인 li요소를 선택 => 1~3번까지 color를 녹색으로 변경
+     -->
+    <div class="wrapper">
+      <h1 class="title">TITLE</h1>
+      <ul>
+        <li class="items">item1</li>
+        <li class="items">item2</li>
+        <li class="items">item3</li>
+      </ul>
+    </div>
+    <ul class="ul2">
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+      <li>hello</li>
+    </ul>
+
+    <script>
+      // document.getElementById("one").innerHTML = "!!!";
+      $("#one").text("hello"); // # 은 아이디
+      // $("p").hide(); // 아무것도 없는 것은 태그명
+      $(".btn1").click(function () {
+        // .은 클래스
+        alert("Good!");
+      });
+
+      // $(".practice").text("실습중입니다.");
+      // $(".practice").html("<strong>실습</strong>중입니다.");
+      $(".practice").css("color", "red");
+      $("img").attr("src", "a.jpg");
+      $("img").attr("data-name", "profile").attr("data-hello", "world");
+
+      $(".btn2").click(function () {
+        let 메모장값 = $("#메모장").val();
+        $("#메모장").val("메모를 작성해주세요");
+        alert(메모장값);
+      });
+      $(".p3").css("color", "blue").css("background-color", "#333");
+
+      // 문제
+      $(".items").parents("ul").css("background-color", "blue");
+      $(".items:nth-child(2)").css("color", "red");
+      $(".ul2").children("li:nth-child(1)").css("color", "green");
+      $(".ul2").children("li:nth-child(2)").css("color", "green");
+      $(".ul2").children("li:nth-child(3)").css("color", "green");
+      $(".ul2")
+        .children("li:nth-child(7)")
+        .css("color", "blue")
+        .css("background-color", "red");
+      $(".ul2")
+        .children("li:nth-child(8)")
+        .css("color", "blue")
+        .css("background-color", "red");
+      $(".ul2")
+        .children("li:nth-child(9)")
+        .css("color", "blue")
+        .css("background-color", "red");
+      $(".ul2")
+        .children("li:nth-child(10)")
+        .css("color", "blue")
+        .css("background-color", "red");
+    </script>
+  </body>
+</html>
