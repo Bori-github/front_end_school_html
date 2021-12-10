@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select box with DOM</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      .btn-lang {
+        margin-bottom: 10px;
+        padding: 10px 30px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: none;
+        font-family: "Noto Sans KR", sans-serif;
+        cursor: pointer;
+      }
+      .list-lang {
+        width: 150px;
+        padding: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-align: center;
+        opacity: 0;
+      }
+      .list-lang button {
+        padding: 8px 0;
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont-combobox">
+      <button class="btn-lang">최애 프로그래밍 언어</button>
+      <ul class="list-lang">
+        <!-- <li class="item-lang">Python</li>
+        <li class="item-lang">Python</li>
+        <li class="item-lang">Python</li> -->
+      </ul>
+    </div>
+    <script>
+      const langBtn = document.querySelector(".btn-lang");
+      const langList = document.querySelector(".list-lang");
+
+      function makeItem() {
+        const langArr = ["Python", "Java", "JavaScript", "C#", "C/C++"];
+        langArr.forEach((item) => {
+          const langItem = document.createElement("li");
+          langItem.classList.add("item-lang");
+          langItem.innerHTML = `<button class="btn-item">${item}</button>`;
+          langList.appendChild(langItem);
+        });
+      }
+
+      makeItem();
+
+      let isActive = false;
+      langBtn.addEventListener("click", () => {
+        if (!isActive) {
+          langList.style.opacity = 1;
+          isActive = true;
+        } else {
+          langList.style.opacity = 0;
+          isActive = false;
+        }
+      });
+
+      const itemBtn = document.querySelector(".btn-item");
+      itemBtn.addEventListener("click", (e) => {
+        // console.log(e);
+        langBtn.innerText = e.target.innerText;
+        langList.style.opacity = 0;
+        isActive = false;
+      });
+    </script>
+  </body>
+</html>
