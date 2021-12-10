@@ -11,9 +11,13 @@
 
     <script>
       const sayHi = document.querySelector(".sayHi");
+      // sayHi 요소가 시작하기 전에 요소 배치
       sayHi.insertAdjacentHTML("beforebegin", "<span>안녕하세요 저는</span>");
+      // sayHi 요소가 시작한 후
       sayHi.insertAdjacentHTML("afterbegin", "<span>재현입니다</span>");
+      // sayHi 요소가 끝나기 전
       sayHi.insertAdjacentHTML("beforeend", "<span>면접오시면</span>");
+      // sayHi 요소가 끝난 후
       sayHi.insertAdjacentHTML("afterend", "<span>치킨사드릴게요</span>");
     </script>
   </body>
