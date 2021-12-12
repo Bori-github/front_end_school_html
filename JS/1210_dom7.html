@@ -15,11 +15,21 @@
       </ol>
     </article>
 
+    <button class="here">
+      <span>target</span>
+    </button>
+
     <script>
       const parent = document.querySelector(".parent");
       parent.addEventListener("click", function (event) {
         console.log(event.target);
         console.log(event.currentTarget);
+      });
+
+      const here = document.querySelector(".here");
+      here.addEventListener("click", function (e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
       });
     </script>
   </body>
