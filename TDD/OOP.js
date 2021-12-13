@@ -60,6 +60,8 @@ function PersonType2() {
   let age = 25;
 
   function innerPersonType() {}
+
+  // innerPersonType에 프로토타입을 등록
   innerPersonType.prototype.getAge = function () {
     return age;
   };
@@ -68,6 +70,25 @@ function PersonType2() {
 }
 
 const Person3 = PersonType2(); // age라는 값을 리턴
-const person3 = new Person3();
+// const person3 = new Person3();
 
-console.log(person3.getAge());
+// console.log(person3.getAge());
+
+//  IIFE 패턴으로 만들어보기
+// IIFE 즉시실행함수
+const PersonTypeIIFE = (function () {
+  // 함수 안의 닫힌 공간
+  let age = 25;
+
+  function innerPersonType() {}
+
+  // innerPersonType에 프로토타입을 등록
+  innerPersonType.prototype.getAge = function () {
+    return age;
+  };
+
+  return innerPersonType;
+})();
+
+const personTypeIIFE = new PersonTypeIIFE();
+console.log(personTypeIIFE.getAge()); // 25
