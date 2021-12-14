@@ -61,6 +61,70 @@ Array(100)
 
 let s = [1, 3, 4, 8, 13, 17, 20];
 let arr = new Array();
-for (let i = 0; i < s.length - 1; i++) {
-  console.log(s[i + 1] - s[i]);
+// for (let i = 0; i < s.length - 1; i++) {
+//   console.log(s[i + 1] - s[i]);
+// }
+//  위와 동일한 코드
+for (let i = 1; i < s.length; i++) {
+  // console.log(s[i] - s[i - 1]);
+  arr.push(s[i] - s[i - 1]);
 }
+
+// arr.indexOf(5)
+let result = arr.indexOf(Math.min(...arr));
+console.log(s[result], s[result + 1]);
+
+// 다른 풀이
+let s = [1, 3, 4, 8, 13, 17, 20];
+// let ss = [3, 4, 8, 13, 17, 20];
+
+// const zip = (a, b) => a.map((v, i) => [v, b[i]]);
+const zip = (a, b) => a.map((val, idx) => [val, b[idx]]);
+
+// zip(s.slice(), s.slice(1)).slice(0, -1);
+// zip(s.slice(0, s.length - 1), s.slice(1));
+let pairs = zip(s.slice(), s.slice(1)).slice(0, -1);
+
+// -1 순서 유지
+// 1 순서 바꿈
+// 오름차순 정렬 :
+//  뒤에 값이 더 크면 순서 유지
+//  뒤에 값이 작으면 순서 바꿈
+function compare(a, b) {
+  if (a[1] - a[0] < b[1] - b[0]) {
+    return -1;
+  }
+  if (a[1] - a[0] > b[1] - b[0]) {
+    return 1;
+  }
+  return 0;
+}
+
+pairs.sort(compare);
+pairs.sort(compare)[0];
+
+// 쉬운 풀이
+let s = [1, 3, 4, 8, 13, 17, 20];
+
+const zip = (a, b) => a.map((val, idx) => [val, b[idx]]);
+let pairs = zip(s.slice(0, s.length - 1), s.slice(1));
+
+// 초기값, for문 안에서는 최솟값을 비교하는 용도로 사용
+// MAX_SAFE_INTEGER를 주로 사용
+// let init = Number.MAX_SAFE_INTEGER;
+// let init = Number.MIN_SAFE_INTEGER;
+let init = pairs[0][1] - [0][0];
+// result는 최종 결과값
+let result = [];
+
+for (let i of pairs) {
+  // console.log(i);
+  if (init > i[1] - i[0]) {
+    init = i[1] - i[0];
+    result = i;
+  }
+}
+
+console.log(result);
+
+// 몸풀기 끝 //
