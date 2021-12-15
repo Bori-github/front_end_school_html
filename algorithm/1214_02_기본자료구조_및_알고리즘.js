@@ -99,6 +99,19 @@ class LinkedList {
     this.데이터수 = 0;
   }
 
+  get fullData() {
+    let 순회용현재노드 = this.head;
+    순회용현재노드 = 순회용현재노드.next;
+
+    let s = "";
+    for (let i = 0; i < this.데이터수; i++) {
+      s += `${순회용현재노드.data},`;
+      순회용현재노드 = 순회용현재노드.next;
+    }
+    // JSON.parse : 문자열을 배열로 바꿔준다
+    return JSON.parse(`[${s.slice(0, -1)}]`);
+  }
+
   length() {
     return this.데이터수;
   }
@@ -125,16 +138,19 @@ class LinkedList {
     return s.slice(0, -1);
   }
 
-  get fullData() {
+  insert(index, data) {
     let 순회용현재노드 = this.head;
     순회용현재노드 = 순회용현재노드.next;
 
-    let s = "";
-    for (let i = 0; i < this.데이터수; i++) {
-      s += `${순회용현재노드.data},`;
+    for (let i = 0; i < index - 1; i++) {
       순회용현재노드 = 순회용현재노드.next;
     }
-    return JSON.parse(`[${s.slice(0, -1)}]`);
+    let 새로운노드 = new Node(data);
+    // 마지막 데이터 지워짐
+    새로운노드.next = 순회용현재노드.next;
+    순회용현재노드.next = 새로운노드;
+    // 데이터수 추가하면 마지막 데이터가 지워지지 않고 데이터 추가
+    this.데이터수 += 1;
   }
 }
 
@@ -147,6 +163,10 @@ l.append(10);
 l.append(20);
 l.append(30);
 l.length();
+l.insert(3, 100);
+l.length();
+// fullData 뒤에 괄호 없이 실행
+l.fullData;
 
 // 3. 정렬
 // 4. 페이지 교체 알고리즘
