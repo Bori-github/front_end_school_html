@@ -76,7 +76,7 @@ class Tree {
       }
       if (data < 순회용현재노드.data) {
         // 들어온 데이터가 작으면 왼쪽에
-        // 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려가야합니다.
+        // 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려간다.
         if (!순회용현재노드.left) {
           순회용현재노드.left = 새로운노드;
           return;
@@ -85,7 +85,7 @@ class Tree {
       }
       if (data > 순회용현재노드.data) {
         // 들어온 데이터가 크면 오른쪽에
-        // 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려가야합니다.
+        // 비어있으면 데이터를 넣고, 비어있지 않으면 타고 또 내려간다.
         if (!순회용현재노드.right) {
           순회용현재노드.right = 새로운노드;
           return;
@@ -98,7 +98,51 @@ class Tree {
   }
 }
 
+
 let t = new Tree(5); // root 노드는 처음에
+t.insert(3);
+t.insert(8);
+t.insert(1);
+t.insert(4);
+t.insert(6);
+t.insert(9);
+
+//  아래처럼 넣는 순서에 따라 순서가 달라진다.
+let t = new Tree(5); // root 노드는 처음에
+t.insert(3);
+t.insert(9);
+t.insert(8);
+t.insert(4);
+t.insert(6);
+t.insert(9);
+
+// 깊스너큐, 파선아실
+    // 갈메기털빼
+DFS () {
+    // 깊이우선탐색, DFS(Depth First Search)
+    // Stack 이용!
+    let 결과값 = [];
+    let 스택 = [this.root];
+    
+    while(스택.length !== 0){
+        let current = 스택.pop();
+        if (current.right) {
+            스택.push(current.right);
+        }
+        if (current.left) {
+            스택.push(current.left);
+        }
+        결과값.push(current.data);
+    }
+    return 결과값;
+}
+
+BFS(){
+  // 너비우선탐색 , BFS(Breadth First Search)
+  // 이용
+}
+
+let t = new Tree(5); // root노드는 처음에!!
 t.insert(3);
 t.insert(8);
 t.insert(1);
