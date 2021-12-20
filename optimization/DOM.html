@@ -34,8 +34,10 @@
     </script> -->
 
     <script>
+      const main = document.querySelector("main");
+      const frag = document.createDocumentFragment();
+
       for (let i = 0; i < 10; i++) {
-        const main = document.querySelector("main");
         const article = document.createElement("article");
         article.innerHTML = `
         <figure>
@@ -47,7 +49,11 @@
         <figcaption class="figCap">유재석 코로나</figcaption>
       </figure>
         `;
+
+        frag.appendChild(article);
+        // main.appendChild(article);
       }
+      main.appendChild(frag);
     </script>
   </body>
 </html>
