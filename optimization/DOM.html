@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>돔 접근 테스트</h1>
+    <main>
+      <!-- <articlec class="parent">
+      <figure>
+        <img
+          src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg"
+          alt=""
+          class="figImg"
+        />
+        <figcaption class="figCap">유재석 코로나</figcaption>
+      </figure>
+    </articlec> -->
+    </main>
+
+    <!-- <script>
+      const parent = document.querySelector(".parent");
+      const targetImg = parent.querySelector(".figImg");
+      const targetTxt = parent.querySelector(".figCap");
+
+      targetImg.setAttribute(
+        "src",
+        "https://file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg"
+      );
+      targetTxt.textContent = "유재석 잇몸 활짝";
+    </script> -->
+
+    <script>
+      for (let i = 0; i < 10; i++) {
+        const main = document.querySelector("main");
+        const article = document.createElement("article");
+        article.innerHTML = `
+        <figure>
+        <img
+          src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg"
+          alt=""
+          class="figImg"
+        />
+        <figcaption class="figCap">유재석 코로나</figcaption>
+      </figure>
+        `;
+      }
+    </script>
+  </body>
+</html>
