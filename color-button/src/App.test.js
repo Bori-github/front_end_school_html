@@ -15,4 +15,5 @@ test("버튼이 정상적으로 작동하고 있나요?", () => {
 
   fireEvent.click(button);
   expect(button).toHaveStyle({ backgroundColor: "blue" });
+  expect(button.textContent).toBe("chage to red~");
 });
